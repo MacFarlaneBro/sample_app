@@ -4594,3 +4594,45 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-18 12:04:59 +0100
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 12:04:59 +0100
   [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'example@railstutorial.org' LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 108.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 14:51:21 +0100
