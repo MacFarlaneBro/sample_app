@@ -9,6 +9,10 @@ describe "Authentication" do
 
     it { should have_content('Sign in') }
     it { should have_title('Sign in') }
+    it { should_not have_link('Profile') }
+    it { should_not have_link('Settings') }
+    it { should_not have_link('Users') }
+    it { should_not have_link('Sign out') }
 
     describe "signin" do 
       before { visit signin_path }
@@ -52,9 +56,7 @@ describe "Authentication" do
       describe "when attempting to visit a protected page" do 
         before do
           visit edit_user_path(user)
-          fill_in "Email",    with: user.email
-          fill_in "Password", with: user.password
-          click_button "Sign in"
+          sign_in(user)
         end
 
         describe "after signing in" do
