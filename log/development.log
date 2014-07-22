@@ -9481,3 +9481,429 @@ Processing by UsersController#index as HTML
   Rendered layouts/_header.html.erb (0.8ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 2.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateForemForums (20140630103451)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (213.1ms)[0m  [1mCREATE TABLE "forem_forums" ("id" serial primary key, "title" character varying(255), "description" text) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103451"]]
+  [1m[36m (127.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemTopics (20140630103452)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (30.0ms)[0m  [1mCREATE TABLE "forem_topics" ("id" serial primary key, "forum_id" integer, "user_id" integer, "subject" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103452"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemPosts (20140630103453)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "forem_posts" ("id" serial primary key, "topic_id" integer, "text" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103453"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddReplyToToForemPosts (20140630103454)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (25.3ms)[0m  [1mALTER TABLE "forem_posts" ADD COLUMN "reply_to_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103454"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddLockedToForemTopics (20140630103455)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (150.2ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "locked" boolean DEFAULT 'f' NOT NULL[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103455"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddPinnedToForemTopics (20140630103456)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "pinned" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103456"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemViews (20140630103457)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "forem_views" ("id" serial primary key, "user_id" integer, "topic_id" integer, "created_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103457"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdatedAtAndCountToForemViews (20140630103458)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "forem_views" ADD COLUMN "updated_at" timestamp[0m
+  [1m[35m (2.4ms)[0m  ALTER TABLE "forem_views" ADD COLUMN "count" integer DEFAULT 0
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103458"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Migrating to AddHiddenToForemTopics (20140630103459)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.7ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "hidden" boolean DEFAULT 'f'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103459"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to AddIndexesToTopicsPostsViews (20140630103460)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_forem_topics_on_forum_id" ON "forem_topics" ("forum_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_forem_topics_on_user_id" ON "forem_topics" ("user_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_forem_posts_on_topic_id" ON "forem_posts" ("topic_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_forem_posts_on_user_id" ON "forem_posts" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_forem_posts_on_reply_to_id" ON "forem_posts" ("reply_to_id")
+  [1m[36m (3.4ms)[0m  [1mCREATE INDEX "index_forem_views_on_user_id" ON "forem_views" ("user_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_forem_views_on_topic_id" ON "forem_views" ("topic_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_forem_views_on_updated_at" ON "forem_views" ("updated_at")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103460"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemCategories (20140630103461)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (26.0ms)[0m  [1mCREATE TABLE "forem_categories" ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103461"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddCategoryIdToForums (20140630103462)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "forem_forums" ADD COLUMN "category_id" integer[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "forem_forums"
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103462"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateForemSubscriptions (20140630103463)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "forem_subscriptions" ("id" serial primary key, "subscriber_id" integer, "topic_id" integer) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103463"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddPendingReviewToForemPosts (20140630103464)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (9.7ms)[0m  ALTER TABLE "forem_posts" ADD COLUMN "pending_review" boolean DEFAULT 't'
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "forem_posts" SET "pending_review" = 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103464"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddPendingReviewToForemTopics (20140630103465)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "pending_review" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "forem_topics" SET "pending_review" = 'f'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103465"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Migrating to AddForemTopicsLastPostAt (20140630103466)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "last_post_at" timestamp
+  [1m[36mForem::Topic Load (1.2ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103466"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemGroups (20140630103467)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "forem_groups" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (3.2ms)[0m  CREATE INDEX "index_forem_groups_on_name" ON "forem_groups" ("name")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103467"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateForemMemberships (20140630103468)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (17.0ms)[0m  CREATE TABLE "forem_memberships" ("id" serial primary key, "group_id" integer, "member_id" integer) 
+  [1m[36m (4.2ms)[0m  [1mCREATE INDEX "index_forem_memberships_on_group_id" ON "forem_memberships" ("group_id")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103468"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemModeratorGroups (20140630103469)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (82.7ms)[0m  [1mCREATE TABLE "forem_moderator_groups" ("id" serial primary key, "forum_id" integer, "group_id" integer) [0m
+  [1m[35m (1.8ms)[0m  CREATE INDEX "index_forem_moderator_groups_on_forum_id" ON "forem_moderator_groups" ("forum_id")
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103469"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to RemovePendingReviewAddStateToForemPosts (20140630103470)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "forem_posts" DROP "pending_review"
+  [1m[36m (9.2ms)[0m  [1mALTER TABLE "forem_posts" ADD COLUMN "state" character varying(255) DEFAULT 'pending_review'[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_forem_posts_on_state" ON "forem_posts" ("state")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103470"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Migrating to RemovePendingReviewFromForemTopicsAddState (20140630103471)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "forem_topics" DROP "pending_review"
+  [1m[36m (7.3ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "state" character varying(255) DEFAULT 'pending_review'[0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "index_forem_topics_on_state" ON "forem_topics" ("state")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103471"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to ApproveAllTopicsAndPosts (20140630103472)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "forem_topics" SET "state" = 'approved'
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "forem_posts" SET "state" = 'approved'[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103472"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddNotifiedToForemPosts (20140630103473)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (7.4ms)[0m  [1mALTER TABLE "forem_posts" ADD COLUMN "notified" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103473"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to MakeForemViewsPolymorphic (20140630103474)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "forem_views" RENAME COLUMN "topic_id" TO "viewable_id"[0m
+  [1m[35m (0.3ms)[0m  ALTER INDEX "index_forem_views_on_topic_id" RENAME TO "index_forem_views_on_viewable_id"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "forem_views" ADD COLUMN "viewable_type" character varying(255)[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "forem_views" SET viewable_type='Forem::Topic'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140630103474"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddForemViewFields (20140630103475)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "forem_views" ADD COLUMN "current_viewed_at" timestamp
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "forem_views" ADD COLUMN "past_viewed_at" timestamp[0m
+  [1m[35m (36.6ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "views_count" integer DEFAULT 0
+  [1m[36m (4.7ms)[0m  [1mALTER TABLE "forem_forums" ADD COLUMN "views_count" integer DEFAULT 0[0m
+  [1m[35mForem::Topic Load (0.7ms)[0m  SELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000
+Scoped order and limit are ignored, it's forced to be batch order and batch size
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103475"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemAdmin (20140630103476)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (42.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "forem_admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103476"]]
+  [1m[36m (49.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemState (20140630103477)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (18.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "forem_state" character varying(255) DEFAULT 'pending_review'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103477"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemAutoSubscribe (20140630103478)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (9.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "forem_auto_subscribe" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103478"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFriendlyIdSlugs (20140630103479)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "forem_forums" ADD COLUMN "slug" character varying(255)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_forem_forums_on_slug" ON "forem_forums" ("slug")
+Scoped order and limit are ignored, it's forced to be batch order and batch size
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."id" ASC LIMIT 1000[0m
+  [1m[35m (5.8ms)[0m  ALTER TABLE "forem_categories" ADD COLUMN "slug" character varying(255)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "index_forem_categories_on_slug" ON "forem_categories" ("slug")[0m
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories" ORDER BY "forem_categories"."id" ASC LIMIT 1000
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "slug" character varying(255)[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_forem_topics_on_slug" ON "forem_topics" ("slug")
+  [1m[36mForem::Topic Load (0.7ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103479"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to RenameTitleToNameOnForemForums (20140630103480)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "forem_forums" RENAME COLUMN "title" TO "name"[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140630103480"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Category Exists (1.3ms)[0m  SELECT 1 AS one FROM "forem_categories" WHERE ("forem_categories"."id" IS NOT NULL) AND "forem_categories"."slug" = 'general' LIMIT 1
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "forem_categories" ("created_at", "name", "slug", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00], ["name", "General"], ["slug", "general"], ["updated_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00]]
+  [1m[35m (4.1ms)[0m  COMMIT
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mForem::Category Load (0.8ms)[0m  SELECT "forem_categories".* FROM "forem_categories" ORDER BY "forem_categories"."id" ASC LIMIT 1
+  [1m[36mForem::Forum Load (1.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = 1 AND "forem_forums"."name" = 'Default' AND "forem_forums"."description" = 'Default forem created by install' ORDER BY "forem_forums"."name" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mForem::Forum Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "forem_forums" WHERE ("forem_forums"."id" IS NOT NULL) AND "forem_forums"."slug" = 'default' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.9ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "forem_forums" ("category_id", "description", "name", "slug") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 1], ["description", "Default forem created by install"], ["name", "Default"], ["slug", "default"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mForem::Post Load (1.0ms)[0m  [1mSELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."text" = 'Hello World' LIMIT 1[0m
+  [1m[35mForem::Topic Load (0.9ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."subject" = 'Welcome to Forem' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Topic Exists (0.6ms)[0m  SELECT 1 AS one FROM "forem_topics" WHERE ("forem_topics"."id" IS NOT NULL) AND "forem_topics"."slug" = 'welcome-to-forem' LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "forem_topics" ("created_at", "forum_id", "slug", "subject", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00], ["forum_id", 1], ["slug", "welcome-to-forem"], ["subject", "Welcome to Forem"], ["updated_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00], ["user_id", 1]]
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "forem_posts" ("created_at", "text", "topic_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00], ["text", "Hello World"], ["topic_id", 1], ["updated_at", Mon, 30 Jun 2014 10:35:04 UTC +00:00], ["user_id", 1]]
+  [1m[36mForem::Topic Load (1.0ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "forem_topics" SET "last_post_at" = '2014-06-30 10:35:04.939692' WHERE "forem_topics"."id" = 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "forem_subscriptions" WHERE "forem_subscriptions"."topic_id" = $1 AND "forem_subscriptions"."subscriber_id" = 1[0m  [["topic_id", 1]]
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "forem_subscriptions" ("subscriber_id", "topic_id") VALUES ($1, $2) RETURNING "id"  [["subscriber_id", 1], ["topic_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-22 12:36:27 +0100
+
+PG::Error (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `connect'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:556:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.5) lib/active_record/migration.rb:796:in `current_version'
+  activerecord (4.0.5) lib/active_record/migration.rb:804:in `needs_migration?'
+  activerecord (4.0.5) lib/active_record/migration.rb:383:in `check_pending!'
+  activerecord (4.0.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__2117157113415360674__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-22 12:37:03 +0100
+
+PG::Error (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `connect'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:556:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.5) lib/active_record/migration.rb:796:in `current_version'
+  activerecord (4.0.5) lib/active_record/migration.rb:804:in `needs_migration?'
+  activerecord (4.0.5) lib/active_record/migration.rb:383:in `check_pending!'
+  activerecord (4.0.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__2117157113415360674__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (76.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (93.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-22 12:37:50 +0100
+
+PG::Error (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:848:in `connect'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:556:in `initialize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.0.5) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.5) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.5) lib/active_record/migration.rb:796:in `current_version'
+  activerecord (4.0.5) lib/active_record/migration.rb:804:in `needs_migration?'
+  activerecord (4.0.5) lib/active_record/migration.rb:383:in `check_pending!'
+  activerecord (4.0.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__2117157113415360674__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
