@@ -6,7 +6,7 @@
   <br/>
   <br/>
   <p>
-    <%= @post.content %>
+    <%= simple_format(@post.content) %>
   </p>
 </div>
 
@@ -14,4 +14,4 @@
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Index', posts_path %>

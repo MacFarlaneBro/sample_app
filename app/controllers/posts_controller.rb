@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def latest
-    if current_user.admin?
+    if signed_in? && current_user.admin?
       @posts = Post.all
       render 'index'
     else
