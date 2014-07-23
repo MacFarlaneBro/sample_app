@@ -11,6 +11,8 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'inherited_resources'
+gem 'simple_form'
+gem 'has_scope', git: 'git://github.com/plataformatec/has_scope.git'
 
 group :development, :test do
   gem 'spork-rails', '4.0.0'

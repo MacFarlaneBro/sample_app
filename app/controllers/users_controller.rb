@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    redirect_to(root_url)
     @user = User.new(user_params)  # Not the final implementation!
     if @user.save
       sign_in @user

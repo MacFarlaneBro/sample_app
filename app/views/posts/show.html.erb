@@ -5,13 +5,12 @@
   </h1>
   <br/>
   <br/>
-  <br/>
   <p>
     <%= @post.content %>
   </p>
 </div>
 
-<% if signed_in? && admin? %>
+<% if signed_in? && current_user.admin? %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
 

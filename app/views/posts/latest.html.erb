@@ -1,0 +1,9 @@
+<h1> The SIPP Blog </h1>
+<h2> by Douglas Brodie </h2>
+
+<% @posts.each do |post| %>
+  <div class=" center hero-unit">
+    <h3><%= post.title %><small> <%= post.created_at.to_formatted_s(:short) %></small></h3>
+    <p><%= post.content %></p>
+  </div>
+<% end %>

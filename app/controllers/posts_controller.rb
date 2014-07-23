@@ -7,6 +7,15 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def latest
+    if current_user.admin?
+      @posts = Post.all
+      render 'index'
+    else
+      @posts = Post.all.order('created_at DESC').limit(3)
+    end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
