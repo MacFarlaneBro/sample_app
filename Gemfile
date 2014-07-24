@@ -13,7 +13,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'inherited_resources'
 gem 'simple_form'
 gem 'has_scope', git: 'git://github.com/plataformatec/has_scope.git'
-gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'forem', :github => 'radar/forem', :branch => "rails4"
 
 group :development, :test do
   gem 'spork-rails', '4.0.0'
