@@ -14,6 +14,7 @@ gem 'inherited_resources'
 gem 'simple_form'
 gem 'has_scope', git: 'git://github.com/plataformatec/has_scope.git'
 
+
 group :development, :test do
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'

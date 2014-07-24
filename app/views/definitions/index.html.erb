@@ -1,0 +1,29 @@
+<h1>Listing definitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Def</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @definitions.each do |definition| %>
+      <tr>
+        <td><%= definition.name %></td>
+        <td><%= definition.def %></td>
+        <td><%= link_to 'Show', definition %></td>
+        <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+        <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Definition', new_definition_path %>

@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    
+    @header = 'big'
   end
 
   def help

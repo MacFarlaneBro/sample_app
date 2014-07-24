@@ -8,7 +8,11 @@
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
-  <body>
+  <% if @header %>
+    <body id="bigbody">
+  <% else %>
+    <body>
+  <% end %>
     <%= render 'layouts/header' %>
     <div class = "container">
       <% flash.each do |key, value| %>

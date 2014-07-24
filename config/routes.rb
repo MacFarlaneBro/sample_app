@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :definitions
+
   resources :posts
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -12,6 +14,7 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/latest',  to: 'posts#latest',         via: 'get'
+  get '/glossary' => 'definitions#index', as: 'glossary'
 
   namespace :backend do
     root to: "posts#index"

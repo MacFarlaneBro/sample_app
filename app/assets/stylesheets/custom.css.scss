@@ -85,6 +85,29 @@ p {
 	text-decoration: none;
     }
 }
+/*
+  The big ID is only active on the front page, it just makes the nav bar and logo much larger than usual.
+*/
+#bigbody {
+   padding-top:150px;
+}
+#big {
+    position:absolute;
+    .navbar-inner{
+	height:90px;
+	#topButtons{
+	    top:90px;
+	}
+	.container{
+	    height:90px;
+	    width:100%;
+	    #logo{
+		font-size:5em;
+		left:30px;
+	    }
+	}
+    }
+}
 
 /* footer */
 
