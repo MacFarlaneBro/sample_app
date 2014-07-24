@@ -78,18 +78,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def strong_params
-    
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
     params.require(:post).permit(:title, :content)
-  end
-
-  def check_auth
-    if session[:zombie_id] != @tweet.zombie_id
-      flash[:notice] = "Sorry, you are not authorized to edit this post"
-      redirect_to(tweets_path)
-    end
   end
 end
