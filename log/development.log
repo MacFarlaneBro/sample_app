@@ -31672,3 +31672,1300 @@ Migrating to CreateDefinitions (20140723151709)
   [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140723151709"]]
   [1m[36m (995.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateForemForums (20140724152016)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "forem_forums" ("id" serial primary key, "title" character varying(255), "description" text) [0m
+PG::Error: ERROR:  relation "forem_forums" already exists
+: CREATE TABLE "forem_forums" ("id" serial primary key, "title" character varying(255), "description" text) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Category Exists (1.4ms)[0m  SELECT 1 AS one FROM "forem_categories" WHERE ("forem_categories"."id" IS NOT NULL) AND "forem_categories"."slug" = 'general' LIMIT 1
+  [1m[36mSQL (63.9ms)[0m  [1mINSERT INTO "forem_categories" ("created_at", "name", "slug", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 24 Jul 2014 15:20:27 UTC +00:00], ["name", "General"], ["slug", "general-d21bca1e-37ee-43c2-af03-998145569ac3"], ["updated_at", Thu, 24 Jul 2014 15:20:27 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories" ORDER BY "forem_categories"."id" ASC LIMIT 1
+  [1m[36mForem::Forum Load (1.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = 1 AND "forem_forums"."name" = 'Default' AND "forem_forums"."description" = 'Default forem created by install' ORDER BY "forem_forums"."name" ASC LIMIT 1[0m
+  [1m[35mForem::Post Load (0.8ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."text" = 'Hello World' LIMIT 1
+  [1m[36mForem::Topic Load (0.9ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."subject" = 'Welcome to Forem' LIMIT 1[0m
+  [1m[35mForem::Post Load (1.5ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 ORDER BY forem_posts.created_at ASC  [["topic_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140616142101)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140616142101"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddIndexToUsersEmail (20140617095508)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140617095508"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddPasswordDigestToUsers (20140617104318)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "password_digest" character varying(255)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140617104318"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddRememberTokenToUsers (20140619105620)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_token" character varying(255)[0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140619105620"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddAdminToUsers (20140627131258)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.3ms)[0m  ALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140627131258"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Migrating to CreatePosts (20140723084749)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "content" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140723084749"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDefinitions (20140723151709)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "definitions" ("id" serial primary key, "name" character varying(255), "def" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140723151709"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateForemForums (20140724152016)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "forem_forums" ("id" serial primary key, "title" character varying(255), "description" text) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152016"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateForemTopics (20140724152017)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "forem_topics" ("id" serial primary key, "forum_id" integer, "user_id" integer, "subject" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152017"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateForemPosts (20140724152018)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "forem_posts" ("id" serial primary key, "topic_id" integer, "text" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152018"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to AddReplyToToForemPosts (20140724152019)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "forem_posts" ADD COLUMN "reply_to_id" integer
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152019"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddLockedToForemTopics (20140724152020)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.9ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "locked" boolean DEFAULT 'f' NOT NULL
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152020"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to AddPinnedToForemTopics (20140724152021)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.1ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "pinned" boolean DEFAULT 'f'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152021"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to AddForemViews (20140724152022)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "forem_views" ("id" serial primary key, "user_id" integer, "topic_id" integer, "created_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152022"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddUpdatedAtAndCountToForemViews (20140724152023)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "forem_views" ADD COLUMN "updated_at" timestamp
+  [1m[36m (2.9ms)[0m  [1mALTER TABLE "forem_views" ADD COLUMN "count" integer DEFAULT 0[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152023"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddHiddenToForemTopics (20140724152024)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "hidden" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152024"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddIndexesToTopicsPostsViews (20140724152025)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mCREATE INDEX "index_forem_topics_on_forum_id" ON "forem_topics" ("forum_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_forem_topics_on_user_id" ON "forem_topics" ("user_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_forem_posts_on_topic_id" ON "forem_posts" ("topic_id")[0m
+  [1m[35m (2.1ms)[0m  CREATE INDEX "index_forem_posts_on_user_id" ON "forem_posts" ("user_id")
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_forem_posts_on_reply_to_id" ON "forem_posts" ("reply_to_id")[0m
+  [1m[35m (1.9ms)[0m  CREATE INDEX "index_forem_views_on_user_id" ON "forem_views" ("user_id")
+  [1m[36m (2.0ms)[0m  [1mCREATE INDEX "index_forem_views_on_topic_id" ON "forem_views" ("topic_id")[0m
+  [1m[35m (2.2ms)[0m  CREATE INDEX "index_forem_views_on_updated_at" ON "forem_views" ("updated_at")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152025"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateForemCategories (20140724152026)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.9ms)[0m  CREATE TABLE "forem_categories" ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152026"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddCategoryIdToForums (20140724152027)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "forem_forums" ADD COLUMN "category_id" integer
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "forem_forums"[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152027"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemSubscriptions (20140724152028)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "forem_subscriptions" ("id" serial primary key, "subscriber_id" integer, "topic_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152028"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddPendingReviewToForemPosts (20140724152029)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.2ms)[0m  [1mALTER TABLE "forem_posts" ADD COLUMN "pending_review" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "forem_posts" SET "pending_review" = 'f'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152029"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Migrating to AddPendingReviewToForemTopics (20140724152030)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "pending_review" boolean DEFAULT 't'
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "forem_topics" SET "pending_review" = 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152030"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemTopicsLastPostAt (20140724152031)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "last_post_at" timestamp[0m
+  [1m[35mForem::Topic Load (1.0ms)[0m  SELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152031"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateForemGroups (20140724152032)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "forem_groups" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_forem_groups_on_name" ON "forem_groups" ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152032"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateForemMemberships (20140724152033)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "forem_memberships" ("id" serial primary key, "group_id" integer, "member_id" integer) [0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_forem_memberships_on_group_id" ON "forem_memberships" ("group_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152033"]]
+  [1m[35m (36.6ms)[0m  COMMIT
+Migrating to CreateForemModeratorGroups (20140724152034)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "forem_moderator_groups" ("id" serial primary key, "forum_id" integer, "group_id" integer) 
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_forem_moderator_groups_on_forum_id" ON "forem_moderator_groups" ("forum_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152034"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to RemovePendingReviewAddStateToForemPosts (20140724152035)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "forem_posts" DROP "pending_review"[0m
+  [1m[35m (7.1ms)[0m  ALTER TABLE "forem_posts" ADD COLUMN "state" character varying(255) DEFAULT 'pending_review'
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_forem_posts_on_state" ON "forem_posts" ("state")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152035"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to RemovePendingReviewFromForemTopicsAddState (20140724152036)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "forem_topics" DROP "pending_review"[0m
+  [1m[35m (8.6ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "state" character varying(255) DEFAULT 'pending_review'
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_forem_topics_on_state" ON "forem_topics" ("state")[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152036"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Migrating to ApproveAllTopicsAndPosts (20140724152037)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "forem_topics" SET "state" = 'approved'[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "forem_posts" SET "state" = 'approved'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152037"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddNotifiedToForemPosts (20140724152038)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (13.1ms)[0m  ALTER TABLE "forem_posts" ADD COLUMN "notified" boolean DEFAULT 'f'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152038"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+Migrating to MakeForemViewsPolymorphic (20140724152039)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "forem_views" RENAME COLUMN "topic_id" TO "viewable_id"
+  [1m[36m (0.5ms)[0m  [1mALTER INDEX "index_forem_views_on_topic_id" RENAME TO "index_forem_views_on_viewable_id"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "forem_views" ADD COLUMN "viewable_type" character varying(255)
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "forem_views" SET viewable_type='Forem::Topic'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724152039"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddForemViewFields (20140724152040)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "forem_views" ADD COLUMN "current_viewed_at" timestamp[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "forem_views" ADD COLUMN "past_viewed_at" timestamp
+  [1m[36m (11.2ms)[0m  [1mALTER TABLE "forem_topics" ADD COLUMN "views_count" integer DEFAULT 0[0m
+  [1m[35m (7.7ms)[0m  ALTER TABLE "forem_forums" ADD COLUMN "views_count" integer DEFAULT 0
+  [1m[36mForem::Topic Load (1.1ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000[0m
+Scoped order and limit are ignored, it's forced to be batch order and batch size
+  [1m[35mForem::Forum Load (0.8ms)[0m  SELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152040"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Migrating to AddForemAdmin (20140724152041)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (7.4ms)[0m  ALTER TABLE "users" ADD COLUMN "forem_admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152041"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Migrating to AddForemState (20140724152042)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.5ms)[0m  ALTER TABLE "users" ADD COLUMN "forem_state" character varying(255) DEFAULT 'pending_review'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152042"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Migrating to AddForemAutoSubscribe (20140724152043)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (10.9ms)[0m  ALTER TABLE "users" ADD COLUMN "forem_auto_subscribe" boolean DEFAULT 'f'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152043"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Migrating to AddFriendlyIdSlugs (20140724152044)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "forem_forums" ADD COLUMN "slug" character varying(255)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "index_forem_forums_on_slug" ON "forem_forums" ("slug")[0m
+Scoped order and limit are ignored, it's forced to be batch order and batch size
+  [1m[35mForem::Forum Load (1.0ms)[0m  SELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."id" ASC LIMIT 1000
+  [1m[36m (3.9ms)[0m  [1mALTER TABLE "forem_categories" ADD COLUMN "slug" character varying(255)[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "index_forem_categories_on_slug" ON "forem_categories" ("slug")
+  [1m[36mForem::Category Load (1.2ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" ORDER BY "forem_categories"."id" ASC LIMIT 1000[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "forem_topics" ADD COLUMN "slug" character varying(255)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "index_forem_topics_on_slug" ON "forem_topics" ("slug")[0m
+  [1m[35mForem::Topic Load (1.4ms)[0m  SELECT "forem_topics".* FROM "forem_topics" ORDER BY "forem_topics"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152044"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to RenameTitleToNameOnForemForums (20140724152045)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "forem_forums" RENAME COLUMN "title" TO "name"
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724152045"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:22:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (12.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1145ms (Views: 1138.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:22:56 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:23:00 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-24 16:23:02 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-24 16:23:04 +0100
+
+SyntaxError (/Users/charliebrodie/Sites/rails_projects/sample_app/app/controllers/posts_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__4367000717372890045__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.6ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-24 16:23:04 +0100
+
+SyntaxError (/Users/charliebrodie/Sites/rails_projects/sample_app/app/controllers/posts_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__4367000717372890045__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (42.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 63.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:31 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:23:33 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.9ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (294.1ms)
+Warning. Error encountered while saving cache 6d746db3c4101ab7aae90114e4035905eb1eeb4f/forem.css.scssc: can't dump anonymous class #<Class:0x007ffd75fb2758>
+
+Completed 200 OK in 626ms (Views: 600.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:23:34 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (3.9ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-24 16:23:34 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:34 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-24 16:23:34 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:25:29 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (2.5ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-24 16:25:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:29 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:29 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:25:31 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (2.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:31 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-24 16:25:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:31 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:25:32 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.4ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (2.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-24 16:25:32 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:25:32 +0100
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-24 16:25:37 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 145ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:25:58 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:23 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:35 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:36 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:45 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:46 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:57 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:27:58 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2754201611116352772_70363280060040'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:29:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 72ms
+
+ActionView::Template::Error (/Users/charliebrodie/Sites/rails_projects/sample_app/app/assets/stylesheets/application.css has already been required):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag "application", media: "all",
+    6:         "data-turbolinks-track" => true %>
+    7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    8:     <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2561971690006970960_70359958269700'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.4ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:30:39 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (8.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 188ms (Views: 183.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2014-07-24 16:30:39 +0100
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (79.7ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (167.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:40 +0100
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-24 16:30:49 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:30:50 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.8ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (281.4ms)
+Completed 200 OK in 312ms (Views: 292.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-24 16:30:51 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bundler/gems/forem-cc6e884c64a0/app/views/forem/forums/index.html.erb within layouts/forem/default (3.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-24 16:30:51 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:51 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-24 16:30:51 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 16:31:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:02 +0100
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2014-07-24 16:31:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (65.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 16:31:03 +0100
