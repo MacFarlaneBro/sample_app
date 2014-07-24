@@ -51,6 +51,10 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
+  def forem_name
+    name
+  end
+
   # Before filters
 
   def signed_in_user
