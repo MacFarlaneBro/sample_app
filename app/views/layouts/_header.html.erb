@@ -5,10 +5,10 @@
 <% end %>
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Kansas City Pensions",  root_path, id: "logo" %>
+      <%= link_to "Kansas City Pensions",  main_app.root_path, id: "logo" %>
       <nav>
 	<ul class="nav pull-right">
-	  <li><%= link_to "Home",    root_path %></li>
+	  <li><%= link_to "Home",    main_app.root_path %></li>
 	  <% if signed_in? %>
 	    <% if current_user.admin? %>
 	      <li><%= link_to "Users", users_path %></li>
@@ -27,8 +27,9 @@
 	      </ul>
 	    </li>
 	  <% else %>
-	    <li><%= link_to "Sign Up", signup_path %></li>
-	    <li><%= link_to "Sign in", signin_path %></li>
+	    <!-- These two links have to be qualified with main app so they work with forem, god knows why but otherwise it throws a NameError -->
+	    <li><%= link_to "Sign Up", main_app.signup_path %></li>
+	    <li><%= link_to "Sign in", main_app.signin_path %></li>
 	  <% end %>
 	</ul>
       </nav>

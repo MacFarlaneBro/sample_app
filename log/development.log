@@ -33808,3 +33808,1873 @@ Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 13:37:55 +010
 
 
 Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 13:37:55 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:45:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (couldn't find file 'forem-bootstrap'
+  (in /Users/charliebrodie/Sites/rails_projects/sample_app/vendor/assets/stylesheets/forem.css.scss:2)):
+     5:     <%= stylesheet_link_tag "application", media: "all",
+     6:         "data-turbolinks-track" => true %>
+     7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     8:     <%= stylesheet_link_tag "forem" %>
+     9:     <%= csrf_meta_tags %>
+    10:     <%= render 'layouts/shim' %>
+    11:   </head>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2098705322643395812_70197605688280'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:50:34 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (couldn't find file 'forem-bootstrap'
+  (in /Users/charliebrodie/Sites/rails_projects/sample_app/vendor/assets/stylesheets/forem.css.scss:2)):
+     5:     <%= stylesheet_link_tag "application", media: "all",
+     6:         "data-turbolinks-track" => true %>
+     7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     8:     <%= stylesheet_link_tag "forem" %>
+     9:     <%= javascript_link_tag "forem" %>
+    10:     <%= csrf_meta_tags %>
+    11:     <%= render 'layouts/shim' %>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2098705322643395812_70197598562200'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:51:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Warning. Error encountered while saving cache 6d746db3c4101ab7aae90114e4035905eb1eeb4f/forem.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache bbb06772ed0eb28ada6ca6f31b3d8e674b385a5d/forem-bootstrap.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache e8daa60fab6eb2a07878290c5ea57e540e754006/bootstrap.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_variables.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_mixins.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_hide-text.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_opacity.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_image.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_labels.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_reset-filter.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_resize.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_responsive-visibility.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_size.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_tab-focus.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_text-emphasis.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_text-overflow.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_vendor-prefixes.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_alerts.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_buttons.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_panels.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_pagination.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_list-group.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_nav-divider.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_forms.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_progress-bar.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_table-row.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_background-variant.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_border-radius.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_gradients.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_clearfix.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_center-block.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_nav-vertical-align.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_grid-framework.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 620fac9e63d6fdddbdd3071e776a26924ea2ff16/_grid.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_normalize.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_print.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_glyphicons.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_scaffolding.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_type.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_code.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_grid.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_tables.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_forms.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_buttons.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_component-animations.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_dropdowns.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_button-groups.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_input-groups.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_navs.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_navbar.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_pagination.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_pager.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_labels.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_badges.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_jumbotron.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_thumbnails.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_alerts.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_progress-bars.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_media.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_list-group.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_panels.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_responsive-embed.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_wells.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_close.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_modals.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_tooltip.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_popovers.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_carousel.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_utilities.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache c1621e7af3e40944893c78c92b6292c5f49ead3a/_responsive-utilities.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache 0fa75035b390a0e27305c6f4ecc8b9ef3ec2f23b/base.cssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache bbb06772ed0eb28ada6ca6f31b3d8e674b385a5d/forem-bootstrap.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache b3be676ce6c9b26e24c0a1d2f51076417ddcb737/forums.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache b3be676ce6c9b26e24c0a1d2f51076417ddcb737/posts.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Warning. Error encountered while saving cache b3be676ce6c9b26e24c0a1d2f51076417ddcb737/topics.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Completed 500 Internal Server Error in 3549ms
+
+ActionView::Template::Error (undefined method `javascript_link_tag' for #<#<Class:0x007fe6be7947d8>:0x007fe6be79f6b0>):
+     6:         "data-turbolinks-track" => true %>
+     7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     8:     <%= stylesheet_link_tag "forem" %>
+     9:     <%= javascript_link_tag "forem" %>
+    10:     <%= csrf_meta_tags %>
+    11:     <%= render 'layouts/shim' %>
+    12:   </head>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2875629727642590493_70314507526220'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:51:41 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `javascript_link_tag' for #<#<Class:0x007fe6be7947d8>:0x007fe6be535050>):
+     6:         "data-turbolinks-track" => true %>
+     7:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     8:     <%= stylesheet_link_tag "forem" %>
+     9:     <%= javascript_link_tag "forem" %>
+    10:     <%= csrf_meta_tags %>
+    11:     <%= render 'layouts/shim' %>
+    12:   </head>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2875629727642590493_70314507526220'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:51:55 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (10.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:55 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/forem-bootstrap.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:51:56 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 14:52:02 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.9ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (4.4ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (33.5ms)
+  Rendered forem/categories/_category.html.erb (117.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/forem/default (419.1ms)
+Completed 200 OK in 539ms (Views: 415.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.7ms)
+  Rendered forem/categories/_category.html.erb (6.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/forem/default (10.7ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+
+
+Started GET "/assets/forem-bootstrap.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:03 +0100
+
+
+Started GET "/forums/categories/general" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+Processing by Forem::CategoriesController#show as HTML
+  Parameters: {"id"=>"general"}
+  [1m[36mForem::Category Load (1.0ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."slug" = 'general' ORDER BY "forem_categories"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (1.0ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.7ms)
+  Rendered forem/categories/_category.html.erb (5.8ms)
+  Rendered forem/categories/show.html.erb within layouts/forem/default (8.3ms)
+Completed 200 OK in 25ms (Views: 14.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+
+
+Started GET "/assets/forem-bootstrap.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:05 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:52:28 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/forums/categories/general" for 127.0.0.1 at 2014-07-28 14:52:28 +0100
+Processing by Forem::CategoriesController#show as HTML
+  Parameters: {"id"=>"general"}
+  [1m[35mForem::Category Load (0.9ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."slug" = 'general' ORDER BY "forem_categories"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.8ms)
+  Rendered forem/categories/_category.html.erb (3.7ms)
+  Rendered forem/categories/show.html.erb within layouts/forem/default (5.2ms)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:28 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:29 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:29 +0100
+
+
+Started GET "/assets/forem-bootstrap.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:29 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/forem-bootstrap.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:52:40 +0100
+
+
+Started GET "/forums/categories/general" for 127.0.0.1 at 2014-07-28 14:55:10 +0100
+Processing by Forem::CategoriesController#show as HTML
+  Parameters: {"id"=>"general"}
+  [1m[36mForem::Category Load (0.7ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."slug" = 'general' ORDER BY "forem_categories"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.7ms)
+  Rendered forem/categories/_category.html.erb (3.4ms)
+  Rendered forem/categories/show.html.erb within layouts/forem/default (4.6ms)
+Warning. Error encountered while saving cache 6d746db3c4101ab7aae90114e4035905eb1eeb4f/forem.css.scssc: can't dump anonymous class #<Class:0x007fe6be4421c0>
+
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:10 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:10 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:19 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:55:20 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:55:20 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 14:55:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-28 14:55:26 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 92ms (Views: 90.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-07-28 14:55:39 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.9ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-28 14:55:43 +0100
+
+SyntaxError (/Users/charliebrodie/Sites/rails_projects/sample_app/app/controllers/posts_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__2385254727931852371__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-28 14:55:43 +0100
+
+SyntaxError (/Users/charliebrodie/Sites/rails_projects/sample_app/app/controllers/posts_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.5) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.5) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.5) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:373:in `_run__2385254727931852371__call__callbacks'
+  activesupport (4.0.5) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-28 14:56:50 +0100
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mPost Load (36.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+  Rendered posts/latest.html.erb within layouts/application (37.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 18.8ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:51 +0100
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-28 14:56:54 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 14:56:55 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.6ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (4.9ms)
+  Rendered forem/categories/_category.html.erb (30.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/forem/default (41.9ms)
+Completed 200 OK in 49ms (Views: 38.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 14:56:56 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.4ms)
+  Rendered forem/categories/_category.html.erb (5.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/forem/default (8.4ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 14:56:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:56 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 14:56:56 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:02:35 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.4ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.8ms)
+  Rendered forem/categories/_category.html.erb (4.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/forem/default (7.1ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 15:02:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:02:35 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 15:02:35 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:02:36 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.3ms)
+  Rendered forem/categories/_category.html.erb (6.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/forem/default (9.4ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 15:02:36 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 15:02:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:02:36 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 15:04:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (46.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 256ms (Views: 250.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 15:04:05 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:04:09 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (1.1ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (3.7ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (18.6ms)
+  Rendered forem/categories/_category.html.erb (47.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (320.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (17.3ms)
+Completed 500 Internal Server Error in 406ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fb966a199e8>:0x007fb965a43050>):
+    27: 	      </ul>
+    28: 	    </li>
+    29: 	  <% else %>
+    30: 	    <li><%= link_to "Sign Up", signup_path %></li>
+    31: 	    <li><%= link_to "Sign in", signin_path %></li>
+    32: 	  <% end %>
+    33: 	</ul>
+  app/views/layouts/_header.html.erb:30:in `_app_views_layouts__header_html_erb___4392464067191981634_70217133298080'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:04:09 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.7ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (3.8ms)
+  Rendered forem/categories/_category.html.erb (9.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (16.4ms)
+Completed 500 Internal Server Error in 80ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fb966a199e8>:0x007fb9644a5630>):
+    27: 	      </ul>
+    28: 	    </li>
+    29: 	  <% else %>
+    30: 	    <li><%= link_to "Sign Up", signup_path %></li>
+    31: 	    <li><%= link_to "Sign in", signin_path %></li>
+    32: 	  <% end %>
+    33: 	</ul>
+  app/views/layouts/_header.html.erb:30:in `_app_views_layouts__header_html_erb___4392464067191981634_70217135479560'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-07-28 15:04:22 +0100
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (4.3ms)
+  Rendered users/_fields.html.erb (48.0ms)
+  Rendered users/new.html.erb within layouts/application (74.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 138ms (Views: 135.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:05:09 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.6ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.6ms)
+  Rendered forem/categories/_category.html.erb (6.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (17.2ms)
+Completed 500 Internal Server Error in 82ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fb966a199e8>:0x007fb965ac1770>):
+    27: 	      </ul>
+    28: 	    </li>
+    29: 	  <% else %>
+    30: 	    <li><%= link_to "Sign Up", signup_path %></li>
+    31: 	    <li><%= link_to "Sign in", signin_path %></li>
+    32: 	  <% end %>
+    33: 	</ul>
+  app/views/layouts/_header.html.erb:30:in `_app_views_layouts__header_html_erb___4392464067191981634_70217133298080'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (40.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (51.2ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:05:09 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.7ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.0ms)
+  Rendered forem/categories/_category.html.erb (5.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (53.1ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fb966a199e8>:0x007fb963c12568>):
+    27: 	      </ul>
+    28: 	    </li>
+    29: 	  <% else %>
+    30: 	    <li><%= link_to "Sign Up", signup_path %></li>
+    31: 	    <li><%= link_to "Sign in", signin_path %></li>
+    32: 	  <% end %>
+    33: 	</ul>
+  app/views/layouts/_header.html.erb:30:in `_app_views_layouts__header_html_erb___4392464067191981634_70217135479560'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:08:46 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.1ms)
+  Rendered forem/categories/_category.html.erb (5.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (58.8ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (undefined local variable or method `signin_path' for #<#<Class:0x007fb966a199e8>:0x007fb966d9a0b8>):
+    28: 	    </li>
+    29: 	  <% else %>
+    30: 	    <li><%= link_to "Sign Up", main_app.signup_path %></li>
+    31: 	    <li><%= link_to "Sign in", signin_path %></li>
+    32: 	  <% end %>
+    33: 	</ul>
+    34:       </nav>
+  app/views/layouts/_header.html.erb:31:in `_app_views_layouts__header_html_erb___4392464067191981634_70217114136540'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:09:56 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.7ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.9ms)
+  Rendered forem/categories/_category.html.erb (6.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (56.3ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007fb966a199e8>:0x007fb966e4a2b0>):
+    4:   </small>
+    5:   <nav>
+    6:     <ul>
+    7:       <li><%= link_to "About",    about_path %></li>
+    8:       <li><%= link_to "Contact",    contact_path %></li>
+    9:       <li><a href="http://www.masteradviser.co.uk">News</a></li>
+   10:     </ul>
+  app/views/layouts/_footer.html.erb:7:in `_app_views_layouts__footer_html_erb___2174006150854931725_70217117793940'
+  app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb___4166548872412274624_70217135463500'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.7ms)
+  Rendered forem/categories/_category.html.erb (6.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 15:10:32 +0100
+
+
+Started GET "/forums/categories/general" for 127.0.0.1 at 2014-07-28 15:10:39 +0100
+Processing by Forem::CategoriesController#show as HTML
+  Parameters: {"id"=>"general"}
+  [1m[36mForem::Category Load (1.0ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."slug" = 'general' ORDER BY "forem_categories"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.4ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.2ms)
+  Rendered forem/categories/_category.html.erb (5.6ms)
+  Rendered forem/categories/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 69.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/forums/categories/general" for 127.0.0.1 at 2014-07-28 15:10:41 +0100
+Processing by Forem::CategoriesController#show as HTML
+  Parameters: {"id"=>"general"}
+  [1m[35mForem::Category Load (0.7ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."slug" = 'general' ORDER BY "forem_categories"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.0ms)
+  Rendered forem/categories/_category.html.erb (4.0ms)
+  Rendered forem/categories/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:10:43 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.1ms)
+  Rendered forem/categories/_category.html.erb (5.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:11:22 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.4ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.7ms)
+  Rendered forem/categories/_category.html.erb (6.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:11:23 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.3ms)
+  Rendered forem/categories/_category.html.erb (6.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:11:27 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.4ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.0ms)
+  Rendered forem/categories/_category.html.erb (5.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:11:29 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.4ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.7ms)
+  Rendered forem/categories/_category.html.erb (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:11:29 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.7ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.4ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.7ms)
+  Rendered forem/categories/_category.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.4ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.9ms)
+  Rendered forem/categories/_category.html.erb (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-28 15:12:02 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 15:12:05 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:12:08 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.3ms)
+  Rendered forem/categories/_category.html.erb (5.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:12:10 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.3ms)
+  Rendered forem/categories/_category.html.erb (5.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/forums/" for 127.0.0.1 at 2014-07-28 15:12:23 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.4ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.7ms)
+  Rendered forem/categories/_category.html.erb (4.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:12:26 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.4ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.1ms)
+  Rendered forem/categories/_category.html.erb (6.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 15:13:00 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 15:13:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:13:03 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mForem::Forum Load (0.4ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (1.8ms)
+  Rendered forem/categories/_category.html.erb (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-28 15:21:39 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-07-28 15:21:42 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (1.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-28 15:21:45 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-28 15:21:47 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.0ms)
+  Rendered forem/categories/_category.html.erb (5.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 1.7ms)
