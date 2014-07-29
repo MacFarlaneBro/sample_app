@@ -38034,3 +38034,599 @@ ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007fc4
   Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 09:21:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (72.7ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 374ms (Views: 367.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:48 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-29 09:21:49 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 09:24:01 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-29 09:24:03 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-07-29 09:24:07 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.8ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-07-29 09:24:07 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.5ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-29 09:24:09 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1[0m
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 19.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-29 09:24:11 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (1.0ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  [1m[36mForem::Forum Load (4.1ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (63.6ms)
+  Rendered forem/categories/_category.html.erb (95.4ms)
+  Rendered forem/forums/index.html.erb within layouts/application (386.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (61.2ms)
+Completed 500 Internal Server Error in 485ms
+
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007f8a4b4beab0>:0x007f8a4b4bd4f8>):
+    18: 		Account <b class="caret"></b>
+    19: 	      </a>
+    20: 	      <ul class="dropdown-menu">
+    21: 		<li><%= link_to "Profile", current_user %></li>
+    22: 		<li><%= link_to "Settings", main_app.edit_user_path(current_user) %></li>
+    23: 		<li class="divider"></li>
+    24: 		<li>
+  app/views/layouts/_header.html.erb:21:in `_app_views_layouts__header_html_erb___728888351474741183_70115980645340'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___2921028823203998793_70115973166740'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-29 09:24:12 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  [1m[36mForem::Forum Load (0.7ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (3.2ms)
+  Rendered forem/categories/_category.html.erb (7.4ms)
+  Rendered forem/forums/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (65.7ms)
+Completed 500 Internal Server Error in 128ms
+
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007f8a4b4beab0>:0x007f8a4b656af8>):
+    18: 		Account <b class="caret"></b>
+    19: 	      </a>
+    20: 	      <ul class="dropdown-menu">
+    21: 		<li><%= link_to "Profile", current_user %></li>
+    22: 		<li><%= link_to "Settings", main_app.edit_user_path(current_user) %></li>
+    23: 		<li class="divider"></li>
+    24: 		<li>
+  app/views/layouts/_header.html.erb:21:in `_app_views_layouts__header_html_erb___728888351474741183_70115973184040'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___2921028823203998793_70115973166740'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-29 09:28:16 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.9ms)
+  Rendered forem/categories/_category.html.erb (6.9ms)
+  Rendered forem/forums/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (62.1ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007f8a4b4beab0>:0x007f8a4b5cc560>):
+    18: 		Account <b class="caret"></b>
+    19: 	      </a>
+    20: 	      <ul class="dropdown-menu">
+    21: 		<li><%= link_to "Profile", current_user %></li>
+    22: 		<li><%= link_to "Settings", main_app.edit_user_path(current_user) %></li>
+    23: 		<li class="divider"></li>
+    24: 		<li>
+  app/views/layouts/_header.html.erb:21:in `_app_views_layouts__header_html_erb___728888351474741183_70115973184040'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___2921028823203998793_70115973166740'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-29 09:28:17 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (2.5ms)
+  Rendered forem/categories/_category.html.erb (6.2ms)
+  Rendered forem/forums/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (56.7ms)
+Completed 500 Internal Server Error in 118ms
+
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x007f8a4b4beab0>:0x007f8a4b68e660>):
+    18: 		Account <b class="caret"></b>
+    19: 	      </a>
+    20: 	      <ul class="dropdown-menu">
+    21: 		<li><%= link_to "Profile", current_user %></li>
+    22: 		<li><%= link_to "Settings", main_app.edit_user_path(current_user) %></li>
+    23: 		<li class="divider"></li>
+    24: 		<li>
+  app/views/layouts/_header.html.erb:21:in `_app_views_layouts__header_html_erb___728888351474741183_70115973184040'
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___2921028823203998793_70115973166740'
+
+
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/charliebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 09:39:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (56.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 258ms (Views: 252.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-29 09:39:46 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 09:40:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1
+  Rendered layouts/_header.html.erb (57.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 251ms (Views: 246.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:57 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 09:40:58 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-29 09:40:59 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-29 09:41:03 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (1.1ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1[0m
+  [1m[35mForem::Forum Load (4.9ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC  [["category_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered forem/forums/_listing.html.erb (56.4ms)
+  Rendered forem/categories/_category.html.erb (87.3ms)
+  Rendered forem/forums/index.html.erb within layouts/application (359.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b3abb0b46aca54a202a898198084b4cc3b4a6579' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 399ms (Views: 370.4ms | ActiveRecord: 12.1ms)
