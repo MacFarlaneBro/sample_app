@@ -50902,3 +50902,241 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 15:26:45
 
 
 Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-31 15:26:45 +0100
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-07-31 15:29:33 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-07-31 15:29:34 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."category_id" = $1 ORDER BY "forem_forums"."name" ASC[0m  [["category_id", 1]]
+  [1m[35mForem::Category Load (0.8ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Post Load (0.8ms)[0m  [1mSELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1[0m  [["forum_id", 1]]
+  [1m[35mForem::Topic Load (0.5ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Post Load (1.1ms)[0m  [1mSELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1[0m  [["forum_id", 2]]
+  [1m[35mForem::Topic Load (0.6ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 2]]
+  Rendered forem/forums/_forum.html.erb (24.8ms)
+  Rendered forem/forums/_listing.html.erb (28.4ms)
+  Rendered forem/categories/_category.html.erb (32.4ms)
+  Rendered forem/forums/index.html.erb within layouts/application (34.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 91.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/forums/introduction" for 127.0.0.1 at 2014-07-31 15:29:36 +0100
+Processing by Forem::ForumsController#show as HTML
+  Parameters: {"id"=>"introduction"}
+  [1m[36mForem::Forum Load (28.1ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."slug" = 'introduction' ORDER BY "forem_forums"."name" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mForem::View Load (47.9ms)[0m  SELECT "forem_views".* FROM "forem_views" WHERE "forem_views"."viewable_id" = $1 AND "forem_views"."viewable_type" = $2 AND "forem_views"."user_id" = 1 LIMIT 1  [["viewable_id", 1], ["viewable_type", "Forem::Forum"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  UPDATE "forem_views" SET "count" = $1, "updated_at" = $2 WHERE "forem_views"."id" = 1  [["count", 9], ["updated_at", Thu, 31 Jul 2014 14:29:36 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.6ms)[0m  [1mUPDATE "forem_forums" SET "views_count" = $1 WHERE "forem_forums"."id" = 1[0m  [["views_count", 16]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "forem_views" SET "past_viewed_at" = $1, "current_viewed_at" = $2, "updated_at" = $3 WHERE "forem_views"."id" = 1  [["past_viewed_at", Tue, 29 Jul 2014 11:01:12 UTC +00:00], ["current_viewed_at", Thu, 31 Jul 2014 14:29:36 UTC +00:00], ["updated_at", Thu, 31 Jul 2014 14:29:36 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (111.5ms)[0m  SELECT "forem_groups".id FROM "forem_groups" INNER JOIN "forem_memberships" ON "forem_groups"."id" = "forem_memberships"."group_id" WHERE "forem_memberships"."member_id" = $1  [["member_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mSELECT "forem_groups".id FROM "forem_groups" INNER JOIN "forem_moderator_groups" ON "forem_groups"."id" = "forem_moderator_groups"."group_id" WHERE "forem_moderator_groups"."forum_id" = $1[0m  [["forum_id", 1]]
+  Rendered forem/forums/_head.html.erb (138.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 1]]
+  [1m[35mForem::Topic Load (11.3ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_topics.pinned DESC, forem_topics.last_post_at DESC, forem_topics.id LIMIT 20 OFFSET 0  [["forum_id", 1]]
+  [1m[36mForem::View Load (0.7ms)[0m  [1mSELECT "forem_views".* FROM "forem_views" WHERE "forem_views"."viewable_id" = $1 AND "forem_views"."viewable_type" = $2 AND "forem_views"."user_id" = 1 LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Forem::Topic"]]
+  [1m[35mForem::Post Exists (15.6ms)[0m  SELECT 1 AS one FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 AND (created_at > '2014-07-29 11:03:48.767440') LIMIT 1  [["topic_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forem_views".* FROM "forem_views" WHERE "forem_views"."viewable_id" = $1 AND "forem_views"."viewable_type" = $2 AND "forem_views"."user_id" = 1 LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Forem::Topic"]]
+  [1m[35mForem::Forum Load (0.9ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1  [["id", 1]]
+  [1m[36mForem::View Load (0.6ms)[0m  [1mSELECT "forem_views".* FROM "forem_views" WHERE "forem_views"."viewable_id" = $1 AND "forem_views"."viewable_type" = $2 AND "forem_views"."user_id" = 1 LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Forem::Forum"]]
+  [1m[35mForem::Post Load (1.1ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 ORDER BY forem_posts.created_at ASC, "forem_posts"."created_at" ASC LIMIT 1  [["topic_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mForem::Post Load (0.9ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 ORDER BY forem_posts.created_at DESC, "forem_posts"."created_at" DESC LIMIT 1  [["topic_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mForem::Topic Load (0.5ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1  [["topic_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1[0m  [["topic_id", 1]]
+  Rendered forem/topics/_topic.html.erb (83.8ms)
+  Rendered forem/forums/show.html.erb within layouts/application (239.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 395ms (Views: 103.3ms | ActiveRecord: 247.3ms)
+
+
+Started GET "/forums/introduction/topics/how-to-user-the-forum" for 127.0.0.1 at 2014-07-31 15:29:39 +0100
+Processing by Forem::TopicsController#show as HTML
+  Parameters: {"forum_id"=>"introduction", "id"=>"how-to-user-the-forum"}
+  [1m[35mForem::Forum Load (0.7ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."slug" = 'introduction' ORDER BY "forem_forums"."name" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Topic Load (13.6ms)[0m  [1mSELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1 AND "forem_topics"."slug" = 'how-to-user-the-forum' ORDER BY "forem_topics"."id" ASC LIMIT 1[0m  [["forum_id", 1]]
+  [1m[35mForem::Forum Load (0.8ms)[0m  SELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1  [["id", 1]]
+  [1m[36mForem::View Load (0.7ms)[0m  [1mSELECT "forem_views".* FROM "forem_views" WHERE "forem_views"."viewable_id" = $1 AND "forem_views"."viewable_type" = $2 AND "forem_views"."user_id" = 1 LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Forem::Topic"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "forem_views" SET "count" = $1, "updated_at" = $2 WHERE "forem_views"."id" = 2[0m  [["count", 19], ["updated_at", Thu, 31 Jul 2014 14:29:40 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Post Load (0.9ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 ORDER BY forem_posts.created_at ASC LIMIT 1  [["topic_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (1.0ms)[0m  UPDATE "forem_topics" SET "views_count" = $1, "updated_at" = $2 WHERE "forem_topics"."id" = 1  [["views_count", 37], ["updated_at", Thu, 31 Jul 2014 14:29:40 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "forem_views" SET "past_viewed_at" = $1, "current_viewed_at" = $2, "updated_at" = $3 WHERE "forem_views"."id" = 2[0m  [["past_viewed_at", Tue, 29 Jul 2014 11:01:16 UTC +00:00], ["current_viewed_at", Thu, 31 Jul 2014 14:29:40 UTC +00:00], ["updated_at", Thu, 31 Jul 2014 14:29:40 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered forem/topics/_head.html.erb (1.4ms)
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (29.2ms)[0m  SELECT COUNT(*) FROM "forem_subscriptions" WHERE "forem_subscriptions"."topic_id" = $1 AND "forem_subscriptions"."subscriber_id" = 1  [["topic_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1[0m  [["topic_id", 1]]
+  [1m[35mForem::Post Load (1.2ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."topic_id" = $1 ORDER BY forem_posts.created_at ASC LIMIT 20 OFFSET 0  [["topic_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mForem::Topic Load (0.6ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mForem::Post Load (11.3ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_posts".* FROM "forem_posts" WHERE "forem_posts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_topics".* FROM "forem_topics" WHERE "forem_topics"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" WHERE "forem_forums"."id" = $1 ORDER BY "forem_forums"."name" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered forem/posts/_post.html.erb (94.0ms)
+  Rendered forem/topics/show.html.erb within layouts/application (168.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 233ms (Views: 139.1ms | ActiveRecord: 71.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a5baca26fd319024d43ac478eabd55fb83423985' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 15:30:15 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-07-31 15:30:16 +0100
