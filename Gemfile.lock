@@ -13,15 +13,8 @@ GIT
       activesupport (>= 3.2, < 5)
 
 GIT
-  remote: git://github.com/radar/forem-bootstrap.git
-  revision: 10be50afc1d0a22af1306076e41624c55fc585be
-  specs:
-    forem-bootstrap (0.0.1)
-      bootstrap-sass (~> 3.1)
-
-GIT
   remote: git://github.com/radar/forem.git
-  revision: 50bbbe1c9ca9cd06950a7f7633afbdce88f1adad
+  revision: b752c8ef3ac8d5a3129da92442ef3a1fd3541941
   branch: rails4
   specs:
     forem (1.0.0.beta1)
@@ -29,7 +22,7 @@ GIT
       decorators (~> 1.0.2)
       friendly_id (~> 5.0.0)
       gemoji (= 1.1.2)
-      rails (>= 4.0.3, <= 4.1.2)
+      rails (>= 4.0.3, <= 4.1.4)
       sanitize (= 2.0.6)
       select2-rails (~> 3.5.4)
       simple_form (~> 3.0.1)
@@ -64,7 +57,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     bcrypt-ruby (3.1.2)
-    bootstrap-sass (3.2.0.0)
+    bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
@@ -212,7 +205,7 @@ GEM
     rubyzip (0.9.9)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
-    sass (3.3.11)
+    sass (3.3.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -268,7 +261,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
-  bootstrap-sass (~> 3.1)
+  bootstrap-sass (~> 2.0)
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   childprocess (= 0.3.6)
@@ -278,7 +271,6 @@ DEPENDENCIES
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
   forem!
-  forem-bootstrap!
   growl (= 1.0.3)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
