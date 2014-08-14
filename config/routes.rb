@@ -10,6 +10,7 @@ SampleApp::Application.routes.draw do
   resources :definitions
 
   resources :posts
+  resources :definitions
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

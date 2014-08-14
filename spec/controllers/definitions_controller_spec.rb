@@ -23,7 +23,7 @@ describe DefinitionsController do
   # This should return the minimal set of attributes required to create a valid
   # Definition. As you add validations to Definition, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "name" => "MyString" } }
+  let(:valid_attributes) { { "name" => "MyString", "def" => "moon" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -34,7 +34,7 @@ describe DefinitionsController do
     it "assigns all definitions as @definitions" do
       definition = Definition.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:definitions).should eq([definition])
+      expect(assigns(:definitions)).to eq([definition])
     end
   end
 
@@ -42,14 +42,14 @@ describe DefinitionsController do
     it "assigns the requested definition as @definition" do
       definition = Definition.create! valid_attributes
       get :show, {:id => definition.to_param}, valid_session
-      assigns(:definition).should eq(definition)
+      expect(assigns(:definition)).to eq(definition)
     end
   end
 
   describe "GET new" do
     it "assigns a new definition as @definition" do
       get :new, {}, valid_session
-      assigns(:definition).should be_a_new(Definition)
+      expect(assigns(:definition)).to be_a_new(Definition)
     end
   end
 
@@ -57,7 +57,7 @@ describe DefinitionsController do
     it "assigns the requested definition as @definition" do
       definition = Definition.create! valid_attributes
       get :edit, {:id => definition.to_param}, valid_session
-      assigns(:definition).should eq(definition)
+      expect(assigns(:definition)).to eq(definition)
     end
   end
 
@@ -71,13 +71,13 @@ describe DefinitionsController do
 
       it "assigns a newly created definition as @definition" do
         post :create, {:definition => valid_attributes}, valid_session
-        assigns(:definition).should be_a(Definition)
-        assigns(:definition).should be_persisted
+        expect(assigns(:definition)).to be_a(Definition)
+        expect(assigns(:definition)).to be_persisted
       end
 
       it "redirects to the created definition" do
         post :create, {:definition => valid_attributes}, valid_session
-        response.should redirect_to(Definition.last)
+        expect(response).to redirect_to(Definition.last)
       end
     end
 
@@ -86,14 +86,14 @@ describe DefinitionsController do
         # Trigger the behavior that occurs when invalid params are submitted
         Definition.any_instance.stub(:save).and_return(false)
         post :create, {:definition => { "name" => "invalid value" }}, valid_session
-        assigns(:definition).should be_a_new(Definition)
+        expect(assigns(:definition)).to be_a_new(Definition)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Definition.any_instance.stub(:save).and_return(false)
         post :create, {:definition => { "name" => "invalid value" }}, valid_session
-        response.should render_template("new")
+        expect(response).to render_template("new")
       end
     end
   end
@@ -113,13 +113,13 @@ describe DefinitionsController do
       it "assigns the requested definition as @definition" do
         definition = Definition.create! valid_attributes
         put :update, {:id => definition.to_param, :definition => valid_attributes}, valid_session
-        assigns(:definition).should eq(definition)
+        expect(assigns(:definition)).to eq(definition)
       end
 
       it "redirects to the definition" do
         definition = Definition.create! valid_attributes
         put :update, {:id => definition.to_param, :definition => valid_attributes}, valid_session
-        response.should redirect_to(definition)
+        expect(response).to redirect_to(definition)
       end
     end
 
@@ -129,7 +129,7 @@ describe DefinitionsController do
         # Trigger the behavior that occurs when invalid params are submitted
         Definition.any_instance.stub(:save).and_return(false)
         put :update, {:id => definition.to_param, :definition => { "name" => "invalid value" }}, valid_session
-        assigns(:definition).should eq(definition)
+        expect(assigns(:definition)).to eq(definition)
       end
 
       it "re-renders the 'edit' template" do
@@ -137,7 +137,7 @@ describe DefinitionsController do
         # Trigger the behavior that occurs when invalid params are submitted
         Definition.any_instance.stub(:save).and_return(false)
         put :update, {:id => definition.to_param, :definition => { "name" => "invalid value" }}, valid_session
-        response.should render_template("edit")
+        expect(response).to render_template("edit")
       end
     end
   end
@@ -153,8 +153,7 @@ describe DefinitionsController do
     it "redirects to the definitions list" do
       definition = Definition.create! valid_attributes
       delete :destroy, {:id => definition.to_param}, valid_session
-      response.should redirect_to(definitions_url)
+      expect(response).to redirect_to(definitions_url)
     end
   end
-
 end

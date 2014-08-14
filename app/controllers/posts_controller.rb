@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :check_auth, only: [:edit, :update, :destroy]
+
   # GET /posts
   # GET /posts.json
   def index
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @tweet = Tweet.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   # POST /posts
@@ -83,10 +83,4 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content)
   end
 
-  def check_auth
-    if session[:zombie_id] != @tweet.zombie_id
-      flash[:notice] = "Sorry, you are not authorized to edit this post"
-      redirect_to(tweets_path)
-    end
-  end
 end
