@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815132456) do
+ActiveRecord::Schema.define(version: 20140815153902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20140815132456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "reply_to_id"
-    t.string   "state",       default: "pending_review"
+    t.string   "state",       default: "approved"
     t.boolean  "notified",    default: false
   end
 
@@ -89,11 +89,11 @@ ActiveRecord::Schema.define(version: 20140815132456) do
     t.string   "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "locked",       default: false,            null: false
+    t.boolean  "locked",       default: false,      null: false
     t.boolean  "pinned",       default: false
     t.boolean  "hidden",       default: false
     t.datetime "last_post_at"
-    t.string   "state",        default: "pending_review"
+    t.string   "state",        default: "approved"
     t.integer  "views_count",  default: 0
     t.string   "slug"
   end
@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20140815132456) do
     t.string   "remember_token"
     t.boolean  "admin",                default: false
     t.boolean  "forem_admin",          default: false
-    t.string   "forem_state",          default: "pending_review"
+    t.string   "forem_state",          default: "approved"
     t.boolean  "forem_auto_subscribe", default: false
   end
 
