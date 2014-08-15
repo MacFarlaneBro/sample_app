@@ -53270,3 +53270,3599 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 16:33:10
 
 
 Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-13 16:33:10 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 09:18:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 370ms (Views: 364.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 09:18:30 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 09:22:42 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.9ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  Rendered collection (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (309.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 357ms (Views: 331.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-15 09:22:58 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 09:23:05 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_token", "d6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0"], ["updated_at", Fri, 15 Aug 2014 08:23:05 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 96ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 09:23:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 09:23:06 +0100
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 09:23:12 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1[0m
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 23.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 09:23:14 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.4ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  Rendered collection (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 09:29:07 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 09:29:07 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/definitions%22%20to%20be%20===%20%22http://test.host/definitions%22" for 127.0.0.1 at 2014-08-15 09:34:47 +0100
+
+ActionController::RoutingError (No route matches [GET] "/definitions%22%20to%20be%20===%20%22http:/test.host/definitions%22"):
+  actionpack (4.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.5) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.5) lib/rails/engine.rb:511:in `call'
+  railties (4.0.5) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/charliemacfarlanebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/charliemacfarlanebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/charliemacfarlanebrodie/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/charliemacfarlanebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/charliemacfarlanebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/charliemacfarlanebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /Users/charliemacfarlanebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.8ms)
+  Rendered /Users/charliemacfarlanebrodie/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/actionpack-4.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (139.2ms)
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:14:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  Rendered layouts/_header.html.erb (23.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 379ms (Views: 371.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:14:54 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:14:56 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.9ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  Rendered collection (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (314.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 366ms (Views: 339.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 11:15:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:15:04 +0100
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+  Rendered posts/latest.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'd6b3d6553e794ca8cdf5fd618cbaacb96a8bfcb0' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "49ba165088e92c98104aa26b92c24c2939f19dfb"], ["updated_at", Fri, 15 Aug 2014 10:15:11 UTC +00:00]]
+  [1m[36m (84.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 89.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:12 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-15 11:15:14 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (62.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23"], ["updated_at", Fri, 15 Aug 2014 10:15:18 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 78ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:18 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:19 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:19 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:15:19 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:15:19 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:15:21 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:15:31 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-08-15 11:15:33 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.9ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-08-15 11:15:35 +0100
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/glossary" for 127.0.0.1 at 2014-08-15 11:15:37 +0100
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.5ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:15:38 +0100
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+  Rendered posts/latest.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 1.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:16:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+  Rendered posts/latest.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 327ms (Views: 303.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:45 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:46 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:16:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-15 11:16:50 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8="}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'a105fbdf1c10fb0bda5c08518e1dcb774a8c6e23' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.6ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_token", "33486bd328785f69ab0b2a0bd600dcca22400d7c"], ["updated_at", Fri, 15 Aug 2014 10:16:50 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:16:50 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:51 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-15 11:16:53 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (323.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 348.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_token", "ac893a983c579889409bdeb8295d87400ae91d05"], ["updated_at", Fri, 15 Aug 2014 10:16:59 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 77ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:16:59 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:17:03 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (1.1ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  Rendered collection (0.0ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 32.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:17:05 +0100
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+  Rendered posts/latest.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-08-15 11:17:12 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (2.5ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/_fields.html.erb (3.1ms)
+  Rendered users/edit.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 1.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:18:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  Rendered layouts/_header.html.erb (20.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 314ms (Views: 307.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:19:09 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[36mForem::Category Load (0.9ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  Rendered collection (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  Rendered forem/forums/index.html.erb within layouts/application (304.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 326.1ms | ActiveRecord: 1.5ms)
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-15 11:27:02 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'ac893a983c579889409bdeb8295d87400ae91d05' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "c49314f1bc5d7745dd4ed393c2fe6e35e7115a29"], ["updated_at", Fri, 15 Aug 2014 10:27:02 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:27:03 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:30:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 332ms (Views: 327.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:48 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:49 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-15 11:30:51 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (342.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 409ms (Views: 407.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 11:30:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "958e330322777105a99adfdb880deb5b97cd11d2"], ["updated_at", Fri, 15 Aug 2014 10:30:56 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 97ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 11:30:56 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '958e330322777105a99adfdb880deb5b97cd11d2' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:56 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:56 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:56 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:30:57 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:31:01 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (0.9ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '958e330322777105a99adfdb880deb5b97cd11d2' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '958e330322777105a99adfdb880deb5b97cd11d2' LIMIT 1
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 71.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:31:03 +0100
+Processing by PostsController#latest as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '958e330322777105a99adfdb880deb5b97cd11d2' LIMIT 1[0m
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 3
+  Rendered posts/latest.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 2.6ms)
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('charliembrodie@gmail.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m  UPDATE "users" SET "admin" = $1, "forem_admin" = $2, "password_digest" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["admin", true], ["forem_admin", true], ["password_digest", "$2a$10$6K22XpJuNpo6QzcCr3NmI.Y2KkyWrcLUEicMVfI4E1AZlQ1PvGwXe"], ["updated_at", Fri, 15 Aug 2014 10:46:33 UTC +00:00]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '958e330322777105a99adfdb880deb5b97cd11d2' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_token", "2ad5885d959a089a156fa8752f9566cc5842de76"], ["updated_at", Fri, 15 Aug 2014 10:47:30 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:47:30 +0100
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-08-15 11:47:32 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 120.5ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 11:48:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (314.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 719ms (Views: 621.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:02 +0100
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "session"=>{"email"=>"charliembrodie@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'charliembrodie@gmail.com' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_token", "8d653c71134644fd3559809a352663bacb2face9"], ["updated_at", Fri, 15 Aug 2014 10:48:12 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 131ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:12 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:13 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:13 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:13 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:13 +0100
+
+
+Started GET "/forums" for 127.0.0.1 at 2014-08-15 11:48:15 +0100
+Processing by Forem::ForumsController#index as HTML
+  [1m[35mForem::Category Load (1.0ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered collection (0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered forem/forums/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/forums/admin" for 127.0.0.1 at 2014-08-15 11:48:17 +0100
+Processing by Forem::Admin::BaseController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered forem/admin/base/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:48:19 +0100
+Processing by Forem::Admin::ForumsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mForem::Forum Load (2.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."name" ASC[0m
+  Rendered forem/admin/forums/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 98ms (Views: 73.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/forums/admin/forums/new" for 127.0.0.1 at 2014-08-15 11:48:20 +0100
+Processing by Forem::Admin::ForumsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mForem::Category Load (0.7ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mForem::Group Load (1.9ms)[0m  SELECT "forem_groups".* FROM "forem_groups"
+  Rendered forem/admin/forums/_form.html.erb (152.0ms)
+  Rendered forem/admin/forums/new.html.erb within layouts/application (154.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 221ms (Views: 208.1ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+Processing by Forem::Admin::ForumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "forum"=>{"title"=>"Pensions", "description"=>"A place for all your pension queries", "moderator_ids"=>[""]}, "commit"=>"Create Forum"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mForem::Forum Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "forem_forums" WHERE ("forem_forums"."id" IS NOT NULL) AND "forem_forums"."slug" = 'pensions' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mForem::Category Load (0.5ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories"[0m
+  [1m[35mForem::Group Load (0.5ms)[0m  SELECT "forem_groups".* FROM "forem_groups"
+  Rendered forem/admin/forums/_form.html.erb (11.2ms)
+  Rendered forem/admin/forums/new.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 219ms (Views: 70.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:48:56 +0100
+
+
+Started GET "/forums/admin/categories" for 127.0.0.1 at 2014-08-15 11:49:20 +0100
+Processing by Forem::Admin::CategoriesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered forem/admin/categories/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/forums/admin/categories/new" for 127.0.0.1 at 2014-08-15 11:49:21 +0100
+Processing by Forem::Admin::CategoriesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered forem/admin/categories/_form.html.erb (54.8ms)
+  Rendered forem/admin/categories/new.html.erb within layouts/application (56.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 77.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/forums/admin/categories" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+Processing by Forem::Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "category"=>{"name"=>"Pensions"}, "commit"=>"Create Category"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Category Exists (0.7ms)[0m  SELECT 1 AS one FROM "forem_categories" WHERE ("forem_categories"."id" IS NOT NULL) AND "forem_categories"."slug" = 'pensions' LIMIT 1
+  [1m[36mSQL (7.4ms)[0m  [1mINSERT INTO "forem_categories" ("created_at", "name", "slug", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 15 Aug 2014 10:49:28 UTC +00:00], ["name", "Pensions"], ["slug", "pensions"], ["updated_at", Fri, 15 Aug 2014 10:49:28 UTC +00:00]]
+  [1m[35m (84.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/forums/admin/categories
+Completed 302 Found in 105ms (ActiveRecord: 93.9ms)
+
+
+Started GET "/forums/admin/categories" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+Processing by Forem::Admin::CategoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.6ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered forem/admin/categories/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:28 +0100
+
+
+Started GET "/forums/admin/categories/new" for 127.0.0.1 at 2014-08-15 11:49:30 +0100
+Processing by Forem::Admin::CategoriesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered forem/admin/categories/_form.html.erb (4.5ms)
+  Rendered forem/admin/categories/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/forums/admin/categories" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+Processing by Forem::Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "category"=>{"name"=>"Insurance"}, "commit"=>"Create Category"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Category Exists (0.5ms)[0m  SELECT 1 AS one FROM "forem_categories" WHERE ("forem_categories"."id" IS NOT NULL) AND "forem_categories"."slug" = 'insurance' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "forem_categories" ("created_at", "name", "slug", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 15 Aug 2014 10:49:36 UTC +00:00], ["name", "Insurance"], ["slug", "insurance"], ["updated_at", Fri, 15 Aug 2014 10:49:36 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/forums/admin/categories
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/forums/admin/categories" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+Processing by Forem::Admin::CategoriesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.8ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  Rendered forem/admin/categories/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:49:37 +0100
+
+
+Started GET "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:49:40 +0100
+Processing by Forem::Admin::ForumsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Forum Load (0.5ms)[0m  SELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."name" ASC
+  Rendered forem/admin/forums/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/forums/admin/forums/new" for 127.0.0.1 at 2014-08-15 11:49:41 +0100
+Processing by Forem::Admin::ForumsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.5ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mForem::Group Load (0.6ms)[0m  [1mSELECT "forem_groups".* FROM "forem_groups"[0m
+  Rendered forem/admin/forums/_form.html.erb (52.7ms)
+  Rendered forem/admin/forums/new.html.erb within layouts/application (53.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:49:59 +0100
+Processing by Forem::Admin::ForumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "forum"=>{"category_id"=>"1", "title"=>"General", "description"=>"A place for all your forum queries", "moderator_ids"=>[""]}, "commit"=>"Create Forum"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Forum Exists (0.6ms)[0m  SELECT 1 AS one FROM "forem_forums" WHERE ("forem_forums"."id" IS NOT NULL) AND "forem_forums"."slug" = 'general' LIMIT 1
+  [1m[36mForem::Category Load (1.2ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "forem_forums" ("category_id", "description", "name", "slug") VALUES ($1, $2, $3, $4) RETURNING "id"  [["category_id", 1], ["description", "A place for all your forum queries"], ["name", "General"], ["slug", "general"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forums/admin/forums
+Completed 302 Found in 18ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:49:59 +0100
+Processing by Forem::Admin::ForumsController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mForem::Forum Load (0.8ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."name" ASC[0m
+  [1m[35mForem::Category Load (0.9ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Post Load (6.1ms)[0m  [1mSELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1[0m  [["forum_id", 1]]
+  [1m[35mForem::Group Exists (4.7ms)[0m  SELECT 1 AS one FROM "forem_groups" INNER JOIN "forem_moderator_groups" ON "forem_groups"."id" = "forem_moderator_groups"."group_id" WHERE "forem_moderator_groups"."forum_id" = $1 LIMIT 1  [["forum_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 1]]
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 1]]
+  Rendered forem/admin/forums/index.html.erb within layouts/application (122.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 129.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:00 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:01 +0100
+
+
+Started GET "/forums/admin" for 127.0.0.1 at 2014-08-15 11:50:04 +0100
+Processing by Forem::Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  Rendered forem/admin/base/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:50:07 +0100
+Processing by Forem::Admin::ForumsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mForem::Forum Load (0.5ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."name" ASC[0m
+  [1m[35mForem::Category Load (0.4ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Post Load (1.1ms)[0m  [1mSELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1[0m  [["forum_id", 1]]
+  [1m[35mForem::Group Exists (1.0ms)[0m  SELECT 1 AS one FROM "forem_groups" INNER JOIN "forem_moderator_groups" ON "forem_groups"."id" = "forem_moderator_groups"."group_id" WHERE "forem_moderator_groups"."forum_id" = $1 LIMIT 1  [["forum_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 1]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 1]]
+  Rendered forem/admin/forums/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/forums/admin/forums/new" for 127.0.0.1 at 2014-08-15 11:50:09 +0100
+Processing by Forem::Admin::ForumsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1[0m
+  [1m[35mForem::Category Load (0.7ms)[0m  SELECT "forem_categories".* FROM "forem_categories"
+  [1m[36mForem::Group Load (0.4ms)[0m  [1mSELECT "forem_groups".* FROM "forem_groups"[0m
+  Rendered forem/admin/forums/_form.html.erb (11.7ms)
+  Rendered forem/admin/forums/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:50:25 +0100
+Processing by Forem::Admin::ForumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "forum"=>{"category_id"=>"2", "title"=>"General", "description"=>"A place for all your Insurance queries", "moderator_ids"=>[""]}, "commit"=>"Create Forum"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mForem::Forum Exists (1.0ms)[0m  SELECT 1 AS one FROM "forem_forums" WHERE ("forem_forums"."id" IS NOT NULL) AND "forem_forums"."slug" = 'general' LIMIT 1
+  [1m[36mForem::Category Load (0.6ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "forem_forums" ("category_id", "description", "name", "slug") VALUES ($1, $2, $3, $4) RETURNING "id"  [["category_id", 2], ["description", "A place for all your Insurance queries"], ["name", "General"], ["slug", "general-e52577fe-83f4-4c33-988b-d93e0092f86e"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forums/admin/forums
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/forums/admin/forums" for 127.0.0.1 at 2014-08-15 11:50:25 +0100
+Processing by Forem::Admin::ForumsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mForem::Forum Load (0.6ms)[0m  [1mSELECT "forem_forums".* FROM "forem_forums" ORDER BY "forem_forums"."name" ASC[0m
+  [1m[35mForem::Category Load (0.7ms)[0m  SELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForem::Category Load (0.7ms)[0m  [1mSELECT "forem_categories".* FROM "forem_categories" WHERE "forem_categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mForem::Post Load (0.9ms)[0m  SELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1  [["forum_id", 1]]
+  [1m[36mForem::Group Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "forem_groups" INNER JOIN "forem_moderator_groups" ON "forem_groups"."id" = "forem_moderator_groups"."group_id" WHERE "forem_moderator_groups"."forum_id" = $1 LIMIT 1[0m  [["forum_id", 1]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 1]]
+  [1m[35mForem::Post Load (0.8ms)[0m  SELECT "forem_posts".* FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1 ORDER BY forem_posts.created_at DESC LIMIT 1  [["forum_id", 2]]
+  [1m[36mForem::Group Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "forem_groups" INNER JOIN "forem_moderator_groups" ON "forem_groups"."id" = "forem_moderator_groups"."group_id" WHERE "forem_moderator_groups"."forum_id" = $1 LIMIT 1[0m  [["forum_id", 2]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "forem_topics" WHERE "forem_topics"."forum_id" = $1  [["forum_id", 2]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "forem_posts" INNER JOIN "forem_topics" ON "forem_posts"."topic_id" = "forem_topics"."id" WHERE "forem_topics"."forum_id" = $1[0m  [["forum_id", 2]]
+  Rendered forem/admin/forums/index.html.erb within layouts/application (27.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 44.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:50:26 +0100
+
+
+Started GET "/latest" for 127.0.0.1 at 2014-08-15 11:50:30 +0100
+Processing by PostsController#latest as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-08-15 11:50:31 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/new.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0mGbcm2+z8BbdUXblubFFlMll2ocoOome4NmSOgkX8=", "post"=>{"title"=>"Hargreaves Lansdowne are a bunch of crooks", "content"=>"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""}, "commit"=>"Create Post"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Exists (1.1ms)[0m  SELECT 1 AS one FROM "posts" WHERE "posts"."title" = 'Hargreaves Lansdowne are a bunch of crooks' LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\r\n\r\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""], ["created_at", Fri, 15 Aug 2014 10:51:14 UTC +00:00], ["title", "Hargreaves Lansdowne are a bunch of crooks"], ["updated_at", Fri, 15 Aug 2014 10:51:14 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 20ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '8d653c71134644fd3559809a352663bacb2face9' LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/forem/base.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/resource.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/definitions.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/topButtons.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/forem.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/backend/resource.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/definitions.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/topButtons.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100
+
+
+Started GET "/assets/forem.css?body=1" for 127.0.0.1 at 2014-08-15 11:51:14 +0100

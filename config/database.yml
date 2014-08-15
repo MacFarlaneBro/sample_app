@@ -20,6 +20,3 @@ production:
   adapter: postgresql
   database: charlies_test
   host: localhost
-
-cucumber:
-  <<: *test

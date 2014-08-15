@@ -106,7 +106,7 @@ describe PostsController do
         # specifies that the Post created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        expect(Post.any_instance).to receive(:update).with({ "title" => "MyString" })
+        Post.any_instance.should_receive(:update).with({ "title" => "MyString" })
         put :update, {:id => post.to_param, :post => { "title" => "MyString" }}, valid_session
       end
 
