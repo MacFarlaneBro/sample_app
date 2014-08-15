@@ -69,6 +69,9 @@ SampleApp::Application.configure do
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
 
+  # Obviously this is for deploying the app on heroku
+  config.action_mailer.default_url_options = { :host => 'rocky-coast-7604.heroku.com' }
+
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
