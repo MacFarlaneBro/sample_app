@@ -17,31 +17,33 @@
     <% end %>
 
     <div class='contents'>
-      <div class='user col-md-2'>
+      <div class='user col-md-2' id="userInfo">
         <div class='username'>
           <% if post.user.is_a?(Forem::NilUser) %>
             <%= t(:deleted) %>
           <% else %>
             <%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
           <% end %>
-        </div>
-        <div class='icon'><%= forem_avatar(post.user, :size => 60) %></div>
-      </div>
-
-      <div class='contents col-md-7'>
-        <a href='#post-<%= post.id %>'>
-          <%= post_time_tag(post) %>
-        </a>
-        <%= forem_format(post.text) %>
-
-        <% if post.reply_to %>
+	          <a href='#post-<%= post.id %>'>
+	   <%= post_time_tag(post) %>
+	 </a>
+	 <% if post.reply_to %>
           <div class='in-reply-to'>
             <%= link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user.forem_name}", "#post-#{post.reply_to.id}" %>
           </div>
         <% end %>
+        </div>
+        <div class='icon'><%= forem_avatar(post.user, :size => 40) %></div>
+      </div>
+
+      <div class='contents col-md-7'>
+	<strong>
+          <%= forem_format(post.text) %>
+	</strong>
+	  <br/>
 
         <% if forem_user %>
-          <div class='btn-group'>
+          <div class='btn-group pull-right'>
             <% if can?(:reply, post.topic) %>
               <% if post.topic.can_be_replied_to? %>
                 <%= link_to t('reply', :scope => 'forem.topic'), forem.new_forum_topic_post_path(post.forum, post.topic, :reply_to_id => post.id), :class => "btn btn-primary" %>
