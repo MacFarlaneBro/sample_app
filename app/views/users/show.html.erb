@@ -14,4 +14,14 @@
       </h1>
     </section>
   </aside>
+  <% if current_user.admin? %>
+    <div id="userAdmin">
+      <p> User Status: <%= @user.forem_state %> </p>
+      <select style="width: 150px">
+	<option value="approved">Approved</option>
+	<option value="spam">spam</option>
+      </select>
+      <button>Change status</button>
+    </div>
+  <% end %>
 </div>

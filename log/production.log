@@ -96,3 +96,8 @@ W, [2014-08-15T16:43:31.006922 #44310]  WARN -- : Warning. Error encountered whi
 
 W, [2014-08-15T16:43:33.979625 #44310]  WARN -- : Warning. Error encountered while saving cache 7e65e57a731f322654a206a85f92585881770be2/forem.css.scssc: can't dump anonymous class #<Class:0x007fa8bc7912d0>
 
+I, [2014-08-18T11:44:02.092769 #52427]  INFO -- : Migrating to CreateAdmin (20140815132456)
+I, [2014-08-18T11:44:02.505167 #52427]  INFO -- : Migrating to TopicsAndPostsDefault (20140815153902)
+I, [2014-08-18T11:44:02.519680 #52427]  INFO -- : Migrating to TopicsAndPostsApprovedByDefault (20140818100533)
+I, [2014-08-18T11:44:02.525499 #52427]  INFO -- : Migrating to RemoveSpamFromUser (20140818101733)
+I, [2014-08-18T11:44:34.470661 #52435]  INFO -- : Migrating to RemoveSpamTagFromUser (20140818102735)
