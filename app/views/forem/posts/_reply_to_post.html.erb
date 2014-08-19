@@ -1,4 +1,4 @@
-<div class='container'">
+<div class='container'>
   <!-- The user icon and name on the first row -->
   <div class="row">
     <a name='post-<%= post.id %>'></a>
@@ -7,27 +7,29 @@
       </div>
       <div class='username pull-left verticalCenter'>
 	<%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
-      <% if post.reply_to %>
-	<small class='in_reply_to'>
-	  <%= link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user.forem_name}", "#post-#{post.reply_to.id}" %>
-	</small>
-      <% end %>
+	<% if post.reply_to %>
+	  <small class='in_reply_to'>
+	    <%= link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user.forem_name}", "#post-#{post.reply_to.id}" %>
+	  </small>
+	<% end %>
       </div>
     </div>
   </div>
 
-    <!-- The actual text of the post being replied to on the second row -->
-    <div class="row">
-      <div class='contents col-md-2'>
-	<strong>
-	  <%= forem_format(post.text) %>
-	</strong>
-      </div>
-    </div>
-    
-    <!-- The time of the original post on the third row -->
-    <div class="row">
-      <time class="pull-right" datetime="<%= post.created_at.to_s(:db) -%>"><%= "#{time_ago_in_words(post.created_at)} #{t("ago")}" %></time>
+  <!-- The actual text of the post being replied to on the second row -->
+  <div class="row">
+    <div class='contents col-md-2'>
+      <strong>
+	<%= forem_format(post.text) %>
+      </strong>
     </div>
   </div>
+  
+  <!-- The time of the original post on the third row -->
+  <div class="row">
+    <small>
+      <time class="pull-right" datetime="<%= post.created_at.to_s(:db) -%>"><%= "#{time_ago_in_words(post.created_at)} #{t("ago")}" %></time>
+    </small>
+  </div>
 </div>
+
