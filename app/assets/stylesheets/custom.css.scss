@@ -216,12 +216,21 @@ input {
     }
 }
 
+.verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+
 #userAdmin {
     background-color:#FFF;
 }
 
+.title {
+    font-weight: bold;
+}
+
 .contents {
-    
     text:strong;
 }
 

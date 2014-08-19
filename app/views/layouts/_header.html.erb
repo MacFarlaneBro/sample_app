@@ -7,7 +7,7 @@
     <div class="container">
       <%= link_to "Kansas City Pensions",  main_app.root_path, id: "logo" %>
       <nav>
-	<ul class="nav pull-right">
+	<ul class="nav pull-right <% if @header %>verticalCenter<% end  %>" style="z-index:3">
 	  <li><%= link_to "Home",    main_app.root_path %></li>
 	  <% if signed_in? %>
 	    <% if current_user.admin? %>

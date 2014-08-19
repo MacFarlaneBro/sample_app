@@ -14,7 +14,7 @@
       </h1>
     </section>
   </aside>
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div id="userAdmin">
       <p> User Status: <%= @user.forem_state %> </p>
       <select style="width: 150px">
