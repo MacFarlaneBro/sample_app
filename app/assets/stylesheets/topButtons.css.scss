@@ -1,3 +1,5 @@
+$topbutton-mouseover: #475757;
+
 #topButtons {
     position:absolute;
     display:table;
@@ -27,44 +29,44 @@
     }
 
     #guide{
-	background:teal;
+	background:#777000;
 	&:hover{
-	    background:black;
+	    background:$topbutton-mouseover;
 	}
     }
 
     #sippProv{
-	background:#CCCCCC;
+	background:#999000;
 	&:hover{
-	    background:#111;
+	    background:$topbutton-mouseover;
 	}
     }
 
     #why{
-	background:#4472B9;
+	background:#999999;
 	&:hover{
-	    background:black;
+	    background:$topbutton-mouseover;
 	}
     }
 
     #how{
-	background:red;
+	background:#BBB000;
 	&:hover{
-	    background:black;
+	    background:$topbutton-mouseover;
 	}
     }
 
     #who{
-	background:orange;
+	background:#DDD000;
 	&:hover{
-	    background:black;
+	    background:$topbutton-mouseover;
 	}
     }
 
     #forum{
-	background:purple;
+	background:#FFF000;
 	&:hover{
-	    background:black;
+	    background:$topbutton-mouseover;
 	}
     }
 }
