@@ -44158,3 +44158,4 @@ Processing by PostsController#index as HTML
   Rendered layouts/_footer.html.erb (0.3ms)
 Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 1.3ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
