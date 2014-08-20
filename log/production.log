@@ -101,3 +101,83 @@ I, [2014-08-18T11:44:02.505167 #52427]  INFO -- : Migrating to TopicsAndPostsDef
 I, [2014-08-18T11:44:02.519680 #52427]  INFO -- : Migrating to TopicsAndPostsApprovedByDefault (20140818100533)
 I, [2014-08-18T11:44:02.525499 #52427]  INFO -- : Migrating to RemoveSpamFromUser (20140818101733)
 I, [2014-08-18T11:44:34.470661 #52435]  INFO -- : Migrating to RemoveSpamTagFromUser (20140818102735)
+W, [2014-08-20T11:55:23.652634 #3470]  WARN -- : Warning. Error encountered while saving cache 4acfc28e371bb7b9b4f825435f757d3a80cb5f8d/select2.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:23.744372 #3470]  WARN -- : Warning. Error encountered while saving cache 1d8b73b65ce2acbe82be504bfcfb4d3ffe781550/custom.css.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:23.757409 #3470]  WARN -- : Warning. Error encountered while saving cache e3c1394acd8505684e3ed844367dbbf0f8f7724d/bootstrap.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:23.765467 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/bootstrap.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:23.850454 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_variables.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.010247 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_mixins.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.049609 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_reset.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.074187 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_scaffolding.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.153013 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_grid.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.199948 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_layouts.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.246681 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_type.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.269850 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_code.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.357654 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_forms.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.421577 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_tables.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.476556 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_sprites.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.523625 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_dropdowns.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.552283 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_wells.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.570289 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_component-animations.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.587805 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_close.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.700126 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_buttons.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.764651 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_button-groups.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.797762 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_alerts.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.860231 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_navs.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.953860 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_navbar.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:24.996604 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.029367 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_pagination.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.054967 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_pager.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.088137 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_modals.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.109446 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_tooltip.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.143836 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_popovers.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.167216 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_thumbnails.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.271492 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_media.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.299236 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_labels-badges.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.331312 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_progress-bars.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.368732 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_accordion.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.400611 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_carousel.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.419752 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_hero-unit.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:25.434207 #3470]  WARN -- : Warning. Error encountered while saving cache 3366a2cefd80c924bce85c420cabaffd524b6e98/_utilities.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:26.144134 #3470]  WARN -- : Warning. Error encountered while saving cache 1d8b73b65ce2acbe82be504bfcfb4d3ffe781550/forums.css.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+
+W, [2014-08-20T11:55:26.162589 #3470]  WARN -- : Warning. Error encountered while saving cache 1d8b73b65ce2acbe82be504bfcfb4d3ffe781550/topButtons.css.scssc: can't dump anonymous class #<Class:0x007fd6e2b3e668>
+

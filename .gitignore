@@ -1,6 +1,6 @@
 tmp/*
-
 /tmp/
+<<<<<<< HEAD
 /tmp/rspec_guard_result
 /tmp/cache/assets/development/sprockets/f80026252f38ca6c70af520ff56c671e
 /tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705
@@ -15,3 +15,9 @@ tmp/*
 /tmp/cache/assets/development/sprockets/d771ace226fc8215a3572e0aa35bb0d6
 /tmp/cache/assets/development/sprockets/e47fb8b3a6962768ddca58e4f227b657
 /log/test.log
+=======
+/tmp/*
+
+
+
+>>>>>>> appearance

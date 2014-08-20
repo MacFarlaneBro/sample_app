@@ -24,6 +24,7 @@ SampleApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/latest',  to: 'posts#latest',         via: 'get'
   get '/glossary' => 'definitions#index', as: 'glossary'
+  match '/forums',  to: 'forums#show',         via: 'get'
 
   namespace :backend do
     root to: "posts#index"
