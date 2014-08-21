@@ -1,29 +1,35 @@
-<h1>Listing definitions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Def</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @definitions.each do |definition| %>
+<container>
+  <div class = "center hero-unit">
+  <h1>Glossary</h1>
+  <h2>Definitions to help you navigate the world of pensions</h2> 
+  <table>
+    <thead>
       <tr>
-        <td><%= definition.name %></td>
-        <td><%= definition.def %></td>
-        <td><%= link_to 'Show', definition %></td>
-        <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
-        <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<th>Term</th>
+	<th>Definition</th>
+	<th></th>
+	<th></th>
+	<th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @definitions.each do |definition| %>
+	<tr>
+          <td><%= definition.name %></td>
+          <td><%= definition.def %></td>
+          <td><%= link_to 'Show', definition %></td>
+	  <% if signed_in? && current_user.admin? %>
+          <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+          <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  <% end %>
+	</tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Definition', new_definition_path %>
+  <br>
+
+  <%= link_to 'New Definition', new_definition_path %>
+  </div>
+</container>
