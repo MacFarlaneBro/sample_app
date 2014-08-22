@@ -19,6 +19,7 @@ html {
 body { 
     padding-top: 80px;
     background-color:#475757;
+    background-image:url('../images/seamless_paper_texture.png');
 }
 
 container {
@@ -52,6 +53,7 @@ h1 {
     letter-spacing: -2px;
     margin-bottom: 30px;
     text-align: center;
+    color: #333333;
 }
 
 h2 {
@@ -71,16 +73,14 @@ p {
 /* header */
 
 #logo {
-    float: left;
-    margin-right: 10px;
+    margin-left: 10px;
     font-size: 1.7em;
-    color: #BBB;
-    font-family: Gotham sans-serif, Arial Black;
-    text-transform: uppercase;
+    color: #EEE;
+    background: url(images/congruent_outline.png) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
-    padding-top: 9px;
     font-weight: bold;
-    line-height: 1;
     &:hover {
 	color: white;
 	text-decoration: none;
@@ -238,4 +238,12 @@ input {
 
 .in-reply-to {
     align:top;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix')
+format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }

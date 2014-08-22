@@ -1,14 +1,9 @@
-<% if @header %>
-  <header class="navbar navbar-fixed-top navbar-inverse" id="big">
-<% else %>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-<% end %>
+<header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "Kansas City Pensions",  main_app.root_path, id: "logo" %>
+      <%= link_to "Kansas City Pensions", main_app.root_path, id: "logo", class: "pull-left verticalCenter" %>
       <nav>
-	<ul class="nav pull-right <% if @header %>verticalCenter<% end  %>" style="z-index:3">
-	  <li><%= link_to "Home",    main_app.root_path %></li>
+	<ul class="nav pull-right" style="z-index:3">
+	  <li><%= link_to "Home", main_app.root_path %></li>
 	  <% if signed_in? %>
 	    <% if current_user.admin? %>
 	      <li><%= link_to "Users", main_app.users_path %></li>
@@ -33,7 +28,6 @@
 	  <% end %>
 	</ul>
       </nav>
-    </div>
     <div id="topButtons">
       <a href="/about" id="guide"><span>About</span></a>
       <a href="#" id="sippProv"><span>Sipp Providers</span></a>

@@ -8,6 +8,7 @@ $topbutton-mouseover: black;
     width:100%;
     z-index:2;
     a{
+	background-image:url('../images/congruent_outline.png');
 	display:table-cell;
 	padding-top: 2px;
 	text-align:center;
@@ -24,40 +25,39 @@ $topbutton-mouseover: black;
 	&:hover{
 	    color:white;
 	    background:black;
-	    /* border:4px solid black; */
 	}
     }
 
     #guide{
-	background:#454545;
+	background-image:url('../images/congruent_outline.png');
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #sippProv{
-	background:#454545;
+	background-image:url('../images/congruent_outline.png');
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #how{
-	background:#454545;
+	background-image:url('../images/congruent_outline.png');
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #who{
-	background:#454545;
+	background-image:url('../images/congruent_outline.png');
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #forum{
-	background:#454545;
+	background-image:url('../images/congruent_outline.png');
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
