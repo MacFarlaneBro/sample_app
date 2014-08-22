@@ -2,6 +2,8 @@
   <div class = "center hero-unit">
   <h1>Glossary</h1>
   <h2>Definitions to help you navigate the world of pensions</h2> 
+  </div>
+  <div class = "center hero-unit">
   <table>
     <thead>
       <tr>
@@ -12,13 +14,12 @@
 	<th></th>
       </tr>
     </thead>
-
     <tbody>
       <% @definitions.each do |definition| %>
 	<tr>
-          <td><%= definition.name %></td>
+          <td><%= link_to "#{definition.name}", definition %></td>
           <td><%= definition.def %></td>
-          <td><%= link_to 'Show', definition %></td>
+          <td></td>
 	  <% if signed_in? && current_user.admin? %>
           <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
           <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>

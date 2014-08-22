@@ -1,4 +1,4 @@
-$topbutton-mouseover: #A34433;
+$topbutton-mouseover: black;
 
 #topButtons {
     position:absolute;
@@ -12,7 +12,7 @@ $topbutton-mouseover: #A34433;
 	padding-top: 2px;
 	text-align:center;
 	border:4px solid #777;
-	color:black;
+	color:#EFFFFF;
 	text-decoration:none;
 	span{
 	    font-size:20px;
@@ -29,42 +29,35 @@ $topbutton-mouseover: #A34433;
     }
 
     #guide{
-	background:#777000;
+	background:#454545;
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #sippProv{
-	background:#999000;
-	&:hover{
-	    background:$topbutton-mouseover;
-	}
-    }
-
-    #why{
-	background:#999999;
+	background:#454545;
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #how{
-	background:#BBB000;
+	background:#454545;
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #who{
-	background:#DDD000;
+	background:#454545;
 	&:hover{
 	    background:$topbutton-mouseover;
 	}
     }
 
     #forum{
-	background:#FFF000;
+	background:#454545;
 	&:hover{
 	    background:$topbutton-mouseover;
 	}

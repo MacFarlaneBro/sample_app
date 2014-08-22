@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="hero-unit">
+  <p>
+    <strong>
+      <%= @definition.name %>
+    </strong>
+  </p>
 
-<p>
-  <strong>
-  <%= @definition.name %>
-  </strong>
-</p>
+  <p>
+    <%= @definition.def %>
+  </p>
 
-<p>
-  <strong>Def:</strong>
-  <%= @definition.def %>
-</p>
-
-<% if signed_in? and current_user.admin? %>
-  <%= link_to 'Edit', edit_definition_path(@definition) %> |
-<% end %>
-<%= link_to 'Back', definitions_path %>
+  <% if signed_in? and current_user.admin? %>
+    <%= link_to 'Edit', edit_definition_path(@definition) %> |
+  <% end %>
+  <%= link_to 'Back', definitions_path %>
+</div>
