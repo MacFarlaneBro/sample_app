@@ -16,8 +16,7 @@
       <% @definitions.each do |definition| %>
 	<tr>
           <td><%= link_to "#{definition.name}", definition %></td>
-          <td><%= definition.def %></td>
-          <td></td>
+          <td><%= truncate(definition.def, length: 70) %></td>
 	  <% if signed_in? && current_user.admin? %>
           <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
           <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>

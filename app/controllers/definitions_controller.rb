@@ -4,7 +4,7 @@ class DefinitionsController < ApplicationController
   # GET /definitions
   # GET /definitions.json
   def index
-    @definitions = Definition.all
+    @definitions = Definition.all.order(:name)
   end
 
   # GET /definitions/1

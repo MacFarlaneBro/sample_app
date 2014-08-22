@@ -1,8 +1,8 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
+<header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
       <%= link_to "Kansas City Pensions", main_app.root_path, id: "logo", class: "pull-left verticalCenter" %>
       <nav>
-	<ul class="nav pull-right" style="z-index:3">
+	<ul class="nav pull-right"> 
 	  <li><%= link_to "Home", main_app.root_path %></li>
 	  <% if signed_in? %>
 	    <% if current_user.admin? %>
@@ -28,12 +28,12 @@
 	  <% end %>
 	</ul>
       </nav>
-    <div id="topButtons">
-      <a href="/about" id="guide"><span>About</span></a>
-      <a href="#" id="sippProv"><span>Sipp Providers</span></a>
-      <a href="/glossary" id="how"><span>Glossary</span></a>
-      <a href="/latest" id="who"><span>Blog</span></a>
-      <a href="/forums" id ="forum"><span>Forum</span></a>
-    </div>
+      <div id="topButtons">
+	<a href="/about" id="guide"><span>About</span></a>
+	<a href="#" id="sippProv"><span>Sipp Providers</span></a>
+	<a href="/glossary" id="how"><span>Glossary</span></a>
+	<a href="/latest" id="who"><span>Blog</span></a>
+	<a href="/forums" id ="forum"><span>Forum</span></a>
+      </div>
   </div>
 </header>

@@ -2,7 +2,8 @@
   <h2><%= link_to t('forem.forum.forums'), forem.root_path %> &raquo; <%= link_to forem_emojify(forum.category), [forem, forum.category] %> &raquo; <%= link_to forem_emojify(forum.title), [forem, forum] %></h2>
   <div id='forum_topic_links' class='btn-group'>
     <% unless @topic.try(:new_record?) %>
-      <% if can? :create_topic, @forum %>
+      
+      <% if signed_in? && current_user.admin?  %>
         <%= link_to t('forem.topic.links.new'), forem.new_forum_topic_path(forum), :class => "btn btn-primary", :id => "new-topic" %>
       <% end %>
     <% end %>
