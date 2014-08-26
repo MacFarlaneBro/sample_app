@@ -19,6 +19,13 @@ html {
 body { 
     padding-top: 80px;
     background-image:url('../images/seamless_paper_texture.png');
+    a {
+	color:grey;
+	&:hover {
+	    text-decoration:none;
+	    color:#444;
+	}
+    }
 }
 
 container {
@@ -61,7 +68,7 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: $grayLight;
+    color: gray;
 }
 
 p {
