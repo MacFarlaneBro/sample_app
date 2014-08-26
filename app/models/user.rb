@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :comments
+  accepts_nested_attributes_for :comments
 
   before_save { email.downcase! }
   before_create :create_remember_token

@@ -3,6 +3,9 @@
   <h1>
     <strong><%= @post.title %></strong>
   </h1>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  <% end %>
   <br/>
   <br/>
   <p>
@@ -10,20 +13,6 @@
   </p>
 </div>
 
-
-<% if signed_in? && current_user.admin? %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-
 <div class="center hero-unit">
-  <% form_for @comment do |f| %>
-    <p>
-      <%= f.label :body %><br />
-      <%= f.text_area :body %>
-    </p>
-
-    <p>
-      <%= f.submit "Post Comment" %>
-    </p>
-  <% end %> 
+  <%= render 'comments/form' %>
 </div>
