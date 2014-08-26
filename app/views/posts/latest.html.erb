@@ -3,10 +3,11 @@
 
 <% @posts.each do |post| %>
   <div class=" center hero-unit">
-    <h3><%= post.title %><small><br/><%= post.created_at.to_formatted_s(:short) %></small></h3>
+    <h3><%= link_to post.title, post %><small><br/><%= post.created_at.to_formatted_s(:short) %></small></h3>
     <div id="post_image">
     </div>
     <br/>
     <p><%= simple_format(post.content) %></p>
+    <p><%= link_to 'Show', post %>|</p>
   </div>
 <% end %>

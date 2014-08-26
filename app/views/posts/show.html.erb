@@ -10,8 +10,20 @@
   </p>
 </div>
 
+
 <% if signed_in? && current_user.admin? %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
 
-<%= link_to 'Index', posts_path %>
+<div class="center hero-unit">
+  <% form_for @comment do |f| %>
+    <p>
+      <%= f.label :body %><br />
+      <%= f.text_area :body %>
+    </p>
+
+    <p>
+      <%= f.submit "Post Comment" %>
+    </p>
+  <% end %> 
+</div>
