@@ -1,25 +1,29 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<div class="center hero-unit">
+  <%= form_for(@comment) do |f| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation">
+	<h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
-      <ul>
-      <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+	<ul>
+	  <% @comment.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+	  <% end %>
+	</ul>
+      </div>
+    <% end %>
+    <% if signed_in? %>
+      <h3>Comments</h3>
+
+      <p>Commenting as: <%= @current_user.name %> </p>
+      <div class="field">
+	<%= f.text_area :body %>
+      </div>
+
+      <div class="actions">
+	<%= f.submit %>
+      </div>
+    <% else %>
+      <p>Please <%= link_to "sign In", signin_path  %>  to leave a comment</p>
+    <% end %>
   <% end %>
-  <% if signed_in? %>
-  <h3>Comment</h3>
-
-  <p>Commenting as: <%= @current_user.name %> </p>
-  <div class="field">
-    <%= f.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <% end %>
-<% end %>
+</div>
