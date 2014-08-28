@@ -11,10 +11,14 @@ SampleApp::Application.routes.draw do
 
   resources :definitions
 
-  resources :posts
+  resources :posts do
+    resources :comments, :only => [:create]
+  end
+  
   resources :definitions
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  
 
   root  'static_pages#home'
 

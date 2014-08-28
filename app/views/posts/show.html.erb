@@ -12,6 +12,7 @@
     <%= simple_format(@post.content) %>
   </p>
 </div>
-
-<%= render 'comments/form' %>
-
+<div id="comments">
+  <%= render :partial => @post.comments %>
+  <%= render 'comments/form' %>
+</div>
