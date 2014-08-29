@@ -1,16 +1,14 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @comments = Comment.all
-  end
-
   def show
+    @comments = Post.find(params[:post_id])
   end
 
   def new
     @comment = Comment.new
     @post = Post.find(params[:post_id])
+    @user = current_user
   end
 
   def edit
@@ -18,9 +16,17 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(comment_params)
-    redirect_to post_path(@post)
+    @comment = @post.comments.new(comment_params)
 
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @comment }
+      else
+        format.html { redirect_to post_path(@post), notice: 'Comment Could not be created' }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /comments/1
@@ -40,7 +46,10 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
     @comment.destroy
+
     respond_to do |format|
       format.html { redirect_to comments_url }
       format.json { head :no_content }
@@ -48,13 +57,13 @@ class CommentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_comment
-      @comment = Comment.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def comment_params
-      params.require(:comment).permit(:user_id, :body, :post_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def comment_params
+    params.require(:comment).permit(:user_id, :body, :post_id)
+  end
 end
