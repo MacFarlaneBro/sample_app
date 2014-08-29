@@ -11,7 +11,13 @@
     <%= simple_format(@post.content) %>
   </p>
 </div>
+
+<h2> Comments </h2>
+
 <div id="comments">
-  <%= render @post.comments %>
+  <% @post.comments.each do |comment| %>
+    <%= render comment %>
+  <% end %>
+
   <%= render 'comments/form' %>
 </div>

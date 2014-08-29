@@ -1,12 +1,10 @@
 <div class="hero-unit">
   <p>
-    <%= @comment.user %>
-    <small><%= @comment.created_at %></small>
+    <strong> <%= comment.user.name %> </strong>
+    <small> <%= comment.created_at %> </small>
   </p>
   
-
   <p>
-    <strong>Body:</strong>
-    <%= @comment.body %>
+    <%= comment.body %>
   </p>
 </div>

@@ -4,4 +4,8 @@ class Comment < ActiveRecord::Base
 
   validates :body, :user_id, :post_id, presence: true
 
+  def set_user!(user)
+    self.user_id = user.id
+  self.save!
+  end
 end

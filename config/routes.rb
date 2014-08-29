@@ -10,7 +10,7 @@ SampleApp::Application.routes.draw do
   resources :definitions
 
   resources :posts do
-    resources :comments, :only => [:create]
+    resources :comments, :only => [:create, :edit, :destroy]
   end
   
   resources :definitions
