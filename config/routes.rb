@@ -10,7 +10,7 @@ SampleApp::Application.routes.draw do
   resources :definitions
 
   resources :posts do
-    resources :comments, :only => [:create, :edit, :destroy]
+    resources :comments, :only => [:create, :edit, :destroy, :update]
   end
   
   resources :definitions
@@ -30,6 +30,7 @@ SampleApp::Application.routes.draw do
   get '/glossary' => 'definitions#index', as: 'glossary'
   match '/forums',  to: 'forums#index',         via: 'get'
 
+  
   namespace :backend do
     root to: "posts#index"
     resources :posts

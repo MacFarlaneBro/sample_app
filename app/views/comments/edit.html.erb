@@ -1,6 +1,6 @@
 <h1>Editing comment</h1>
+<div class="hero-unit">
+  <%= render 'editform' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+  <%= link_to 'Back', @post, class: 'pull-right' %>
+</div>

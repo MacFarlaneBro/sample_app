@@ -1,5 +1,7 @@
+<!-- This is of course, terrible practice and should never really be done as it violates most principles of DRY however, I'm a little at my wits end so I'm going to leave it in for now and possibly come back later, in case I don't remember this is a form for editing posts, identical in every way to the new post form other than the 'form_for' line -->
+
 <div>
-    <%= form_for([@post, @post.comments.build]) do |f| %>
+  <%= form_for([@post, @comment]) do |f| %>
       <% if @comment.errors.any? %>
 	<div id="error_explanation">
 	  <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>

@@ -11,6 +11,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
   end
 
   def create
@@ -25,7 +27,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
-        format.html { render action: 'new', notice: 'Comment Could not be created' }
+        format.html { render action: 'new', notice: 'Comment Could not be ' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -34,9 +36,10 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
+    @post = Post.find(params[:post_id])
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to post_path(@post), notice: 'Comment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
