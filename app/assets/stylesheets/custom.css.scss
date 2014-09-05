@@ -242,14 +242,18 @@ format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') f
 
 .historic-user-activity {
     border-bottom:1px solid black;
+    background:#DDDDDD;
+    padding:3px;
 }
 
 #user-comment-history {
     overflow:scroll;
     height:400px;
+    border: 1px solid #CCCCCC;
 }
 
 #user-forum-history {
     overflow:scroll;
     height:400px;
+    border: 1px solid #CCCCCC;
 }

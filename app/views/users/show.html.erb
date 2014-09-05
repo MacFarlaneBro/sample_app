@@ -54,9 +54,9 @@
       
       <% @user.forem_posts.order(created_at: :desc).each do |comment| %>
 	<div class="historic-user-activity">
-	  <small>at:<%= comment.created_at %>, in: <%=comment.topic%></small>
+	  <small><%= comment.created_at.to_formatted_s(:long) %></small>
+	  <span class="pull-right"><small>Posted to: </small> <%= link_to comment.topic, forem.forum_topic_path(comment.topic.forum, comment.topic) %></span>
 	  <p><%= comment.text %></p>
-	  <%= link_to 'topic', forem.forum_topic_path(comment.topic.forum, comment.topic) %>
 	</div>
       <% end %>
 
