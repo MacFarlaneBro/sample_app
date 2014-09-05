@@ -1,4 +1,4 @@
-<div>
+<div id="comment-form">
     <%= form_for([@post, @post.comments.build]) do |f| %>
       <% if @comment.errors.any? %>
 	<div id="error_explanation">

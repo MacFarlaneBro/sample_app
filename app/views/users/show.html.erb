@@ -25,3 +25,43 @@
     </div>
   <% end %>
 </div>
+
+<!-- The users history of activity on the site  -->
+<div id="user-history" class="hero-unit">
+
+  <!-- Blog comment history -->
+  <h2> Blog Comments </h2>
+  <div id="user-comment-history">
+    <% if signed_in? && @user.comments  %>
+      <p> You have made <%= @user.comments.count %> comment<% if @user.comments.count != 1 %>s<% end %> </p>
+      
+      <% @user.comments.order(created_at: :desc).each do |comment| %>
+	<div class="historic-user-activity">
+	  <small><%= comment.created_at %></small>	
+	  <p><%= comment.body %><span class="pull-right"><small><%= link_to 'View Post', comment.post %></small></p>
+	</div>
+      <% end %>
+
+    <% else  %>
+      <p> You don't seem to have posted anything yet! </p>
+    <% end %>
+  </div>
+  <!-- Forum Post history -->
+  <h2> Forum Posts </h2>
+  <div id="user-forum-history">
+    <% if signed_in? && @user.forem_posts  %>
+      <p> You have made <%= @user.forem_posts.count %> posts to the forum </p>
+      
+      <% @user.forem_posts.order(created_at: :desc).each do |comment| %>
+	<div class="historic-user-activity">
+	  <small>at:<%= comment.created_at %>, in: <%=comment.topic%></small>
+	  <p><%= comment.text %></p>
+	  <%= link_to 'topic', forem.forum_topic_path(id: comment.topic) %>
+	</div>
+      <% end %>
+
+    <% else %>
+      <p> You don't seem to have posted anything yet! </p>
+    <% end %>
+  </div>
+</div>

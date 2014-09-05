@@ -35,9 +35,9 @@ describe "User Pages" do
       it { should_not have_link('delete') }
 
       describe "as an admin user" do
-        let(:admin) { FactoryGirl.create(:admin) }
+        let(:admin_user) { FactoryGirl.create(:admin_user) }
         before do
-          sign_in admin
+          sign_in admin_user
           visit users_path
         end
 
@@ -66,6 +66,9 @@ describe "User Pages" do
 
     it { should have_content(user.name) }
     it { should have_title(user.name) }
+    
+    it { should have_content(user.post_history) }
+    it { should have_content(user.comment_history) }
   end
 
   describe "signup" do
