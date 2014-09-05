@@ -56,7 +56,7 @@
 	<div class="historic-user-activity">
 	  <small>at:<%= comment.created_at %>, in: <%=comment.topic%></small>
 	  <p><%= comment.text %></p>
-	  <%= link_to 'topic', forem.forum_topic_path(id: comment.topic) %>
+	  <%= link_to 'topic', forem.forum_topic_path(comment.topic.forum, comment.topic) %>
 	</div>
       <% end %>
 
