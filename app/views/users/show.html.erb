@@ -28,9 +28,9 @@
 
 <!-- The users history of activity on the site  -->
 <div id="user-history" class="hero-unit">
-
+  <h2> User History </h2>
   <!-- Blog comment history -->
-  <h2> Blog Comments </h2>
+  <h3> Blog Comments </h3>
   <div id="user-comment-history">
     <% if signed_in? && @user.comments  %>
       <p> You have made <%= @user.comments.count %> comment<% if @user.comments.count != 1 %>s<% end %> </p>
@@ -47,7 +47,7 @@
     <% end %>
   </div>
   <!-- Forum Post history -->
-  <h2> Forum Posts </h2>
+  <h3> Forum Posts </h3>
   <div id="user-forum-history">
     <% if signed_in? && @user.forem_posts  %>
       <p> You have made <%= @user.forem_posts.count %> posts to the forum </p>
