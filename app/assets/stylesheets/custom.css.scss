@@ -237,3 +237,23 @@ input {
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix')
 format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+
+/* User Profile Page */
+
+.historic-user-activity {
+    border-bottom:1px solid black;
+    background:#DDDDDD;
+    padding:3px;
+}
+
+#user-comment-history {
+    overflow:scroll;
+    height:400px;
+    border: 1px solid #CCCCCC;
+}
+
+#user-forum-history {
+    overflow:scroll;
+    height:400px;
+    border: 1px solid #CCCCCC;
+}

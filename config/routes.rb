@@ -7,6 +7,10 @@ SampleApp::Application.routes.draw do
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => '/forums'
 
+  Forem::Engine.routes.draw do
+    resources :topics
+  end
+
   resources :definitions
 
   resources :posts do
@@ -29,12 +33,12 @@ SampleApp::Application.routes.draw do
   match '/latest',  to: 'posts#latest',         via: 'get'
   get '/glossary' => 'definitions#index', as: 'glossary'
   match '/forums',  to: 'forums#index',         via: 'get'
-
+  match '/topics',  to: 'topics#index',         via: 'get'
   
-  namespace :backend do
-    root to: "posts#index"
-    resources :posts
-  end
+  # namespace :backend do
+  #   root to: "posts#index"
+  #   resources :posts
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
